@@ -1,0 +1,12 @@
+.my-btn {
+    background-color: rgba(44, 18, 78, 0.932);
+    color: skyblue;
+    padding: 14px 166px;
+    text-transform: capitalize;
+    font-size: 2rem;
+    letter-spacing: 0.5em;
+}
+
+.alert {
+    text-align: center;
+}
