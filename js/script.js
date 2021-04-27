@@ -22,40 +22,40 @@
 //Пользователь вводит сумму вклада и процент, который будет начисляться
 // ежегодно. Отобразить размер вклада поочередно на ближайшие 5 лет. 
 
-let percentages = +prompt("ВВедите процентную ставку на ваш депозит: "); // Проценты по вкладу
-let firstYear = 0;
-let secondYear = 0;
-let thirdYear = 0;
-let fourthYear = 0;
-let fifthYear = 0;
+// let percentages = +prompt("ВВедите процентную ставку на ваш депозит: "); // Проценты по вкладу
+// let firstYear = 0;
+// let secondYear = 0;
+// let thirdYear = 0;
+// let fourthYear = 0;
+// let fifthYear = 0;
 
-let contribution = +prompt("Введите сумму вашего вклада:");
+// let contribution = +prompt("Введите сумму вашего вклада:");
 
-  if (!contribution && typeof contribution == "object") {
-      alert ("Вы отменили сделку!!!");
-  }
+//   if (!contribution && typeof contribution == "object") {
+//       alert ("Вы отменили сделку!!!");
+//   }
 
-  else {
-    if (contribution == "") {
-        alert ("вы ни чего не ввели!!!");
-      }
+//   else {
+//     if (contribution == "") {
+//         alert ("вы ни чего не ввели!!!");
+//       }
 
-      else {
-        if(isNaN(+contribution)) {
-          alert ("Это не сумма!!!");
-        }
-          else {
-            firstYear = contribution + (contribution / 100) * percentages;
-            alert(typeof firstYear);
-            secondYear = fifthYear + (fifthYear / 100) * percentages;
-            alert(typeof secondYear);
-            thirdYear = secondYear + (secondYear / 100) * percentages;
-            fourthYear = thirdYear + (thirdYear / 100) * percentages;
-            fifthYear = fourthYear + (fourthYear / 100) * percentages;
-            alert("Сумма вашего вклада за первый год:" + fifthYear + "\n за второй год: "+ secondYear + "\n за третий год: "+ thirdYear + "\n за четвёртый год: "+ fourthYear + "\n за пятый год: "+ fifthYear);
-    }
-  }
-}
+//       else {
+//         if(isNaN(+contribution)) {
+//           alert ("Это не сумма!!!");
+//         }
+//           else {
+//             firstYear = contribution + (contribution / 100) * percentages;
+//             alert(typeof firstYear);
+//             secondYear = fifthYear + (fifthYear / 100) * percentages;
+//             alert(typeof secondYear);
+//             thirdYear = secondYear + (secondYear / 100) * percentages;
+//             fourthYear = thirdYear + (thirdYear / 100) * percentages;
+//             fifthYear = fourthYear + (fourthYear / 100) * percentages;
+//             alert("Сумма вашего вклада за первый год:" + fifthYear + "\n за второй год: "+ secondYear + "\n за третий год: "+ thirdYear + "\n за четвёртый год: "+ fourthYear + "\n за пятый год: "+ fifthYear);
+//     }
+//   }
+// }
 
 
 // Программа хранит в двух переменных курс доллара и евро. В первой переменной у вас
@@ -89,3 +89,20 @@ let contribution = +prompt("Введите сумму вашего вклада:
 //     }
 //   }
 // } 
+
+
+//            Задача № 4 
+
+// 4.Запросить у пользователя ввод числа и сохранить это число в переменную a. 
+//   Если переменная a равна 10, то выведите 'Верно', иначе выведите 'Неверно'. 
+
+//              Решение:
+
+let a = +prompt ("Введите пожалуйста Ваше число: ");
+
+if (a == 10) {
+  alert ("Верно!");
+}
+  else {
+    alert ("Неверно!");
+  }
