@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(189, 197, 243);
+  font-size: 16px;
+  color: rgb(61, 48, 48);
+  text-align: center;
+  padding-top: 100px;
+}
+
+div {
+  background-color: #fff8dc;
+  width: 50%;
+  padding: 10px;
+  border: 2px solid rgb(132, 143, 206);
+  
+}
+
+h1 {
+  font-size: 2rem;
+  color: rgb(45, 29, 90);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(122, 72, 13);
+  font-size: 1.2rem;
+  padding: 5px 0;
+}

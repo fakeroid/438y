@@ -17,45 +17,42 @@
 
 //alert(trapezoidArea);
 
-//              задача № 3
+
+
+
+//              задача № 3  *******
 //
 //Пользователь вводит сумму вклада и процент, который будет начисляться
 // ежегодно. Отобразить размер вклада поочередно на ближайшие 5 лет. 
 
-// let percentages = +prompt("ВВедите процентную ставку на ваш депозит: "); // Проценты по вкладу
-// let firstYear = 0;
-// let secondYear = 0;
-// let thirdYear = 0;
-// let fourthYear = 0;
-// let fifthYear = 0;
+//                ****** Решение
 
+// let result; // Итоговая строка вывода
+// let period = +prompt("Введите срок вклада: ");
 // let contribution = +prompt("Введите сумму вашего вклада:");
+// let percentages = +prompt("ВВедите процентную ставку на ваш депозит: "); // Проценты по вкладу
 
 //   if (!contribution && typeof contribution == "object") {
 //       alert ("Вы отменили сделку!!!");
 //   }
 
-//   else {
+//   else 
 //     if (contribution == "") {
 //         alert ("вы ни чего не ввели!!!");
 //       }
 
-//       else {
-//         if(isNaN(+contribution)) {
+//       else 
+//         if(isNaN(+contribution || +percentages || +period)) {
 //           alert ("Это не сумма!!!");
 //         }
 //           else {
-//             firstYear = contribution + (contribution / 100) * percentages;
-//             alert(typeof firstYear);
-//             secondYear = fifthYear + (fifthYear / 100) * percentages;
-//             alert(typeof secondYear);
-//             thirdYear = secondYear + (secondYear / 100) * percentages;
-//             fourthYear = thirdYear + (thirdYear / 100) * percentages;
-//             fifthYear = fourthYear + (fourthYear / 100) * percentages;
-//             alert("Сумма вашего вклада за первый год:" + fifthYear + "\n за второй год: "+ secondYear + "\n за третий год: "+ thirdYear + "\n за четвёртый год: "+ fourthYear + "\n за пятый год: "+ fifthYear);
-//     }
-//   }
-// }
+//             for(let i = 0; i < period; i++) {
+//               contribution += contribution * percentages / 100;
+//               result +=`ваш вклад увеличивался ${i} год: ${contribution}\n`;
+//             }
+//               alert(result);
+//         }     
+
 
 
 // Программа хранит в двух переменных курс доллара и евро. В первой переменной у вас
@@ -73,7 +70,7 @@
 //   alert("Вы отменили!!!");
 // }
 // else {
-  
+
 //   if(rubles == "") {
 //     alert("Вы ничего не ввели!!!");
 //   }
@@ -98,11 +95,170 @@
 
 //              Решение:
 
-let a = +prompt ("Введите пожалуйста Ваше число: ");
+// let a = parseInt(prompt ("Введите пожалуйста Ваше число: "));
 
-if (a == 10) {
-  alert ("Верно!");
-}
-  else {
-    alert ("Неверно!");
-  }
+// if (a == 10) {
+//   alert ("Верно!");
+// }
+//   else {
+//     alert ("Неверно!");
+//   }
+
+// задача № 5
+
+// let i = 1;
+
+// //  Цикл с простусловие
+
+// while (i <= 50) {
+//   console.log(i + `\n`);
+//   i++;
+// }
+
+
+//    калькулятор:
+//    Сложение 2-х чисел
+//    
+
+// let cancel = true;
+// let menu = `Ваш выбор (0 - 6):
+//     1. Сложение двух чисел
+//     2. Разность двух чисел
+//     3. Произведение двух чисел
+//     4. Деление двух чисел
+//     5. Возведение в степень
+//     6.вычисление корня n степени
+//     0.Отмена`;
+
+// let result;
+// let num1, num2;
+
+// do {
+//   let operation = +prompt(menu, "0");
+
+//   switch (operation) {
+//     case "1":
+//       num1 = +prompt("Первое число: ");
+//       num2 = +prompt("Веорое число: ");
+
+//       result = num1 + num2;
+//       alert(`Сумма чисел = ${result}`);
+//       break;
+//     case "2":
+//       num1 = +prompt("Первое число:");
+//       num2 = +prompt("Веорое число: ");
+
+//       result = num1 - num2;
+//       alert(`Разность чисел = ${result}`);
+//       break;
+//     case " 3 ":
+//       num1 = +prompt("Первое число:");
+//       num2 = +prompt("Веорое число: ");
+
+//       result = num1 * num2;
+//       alert(`Произведение чисел = ${result}`);
+//       break;
+//     case " 4 ":
+//       num1 = +prompt("Первое число:");
+//       num2 = +prompt("Веорое число: ");
+
+//       result = num1 / num2;
+//       alert(`Деление чисел = ${result}`);
+//       break;
+//     case " 5 ":
+//       break;
+//     case " 6 ":
+//       break;
+//       //Сброс меню
+//     case " 0 ":
+//       break;
+//     case null:
+//       cancel = false
+//       break;
+//   }
+// } while (cancel);
+
+
+//**** Мини-калькулятор ****
+// сложение 2-х чисел
+// разность 2-х чисел
+// произведение 2-х чисел
+// частное 2-х чисел
+// возведение числа в n-степень
+// корень n-й степени
+
+// let cancel = true;
+// let menu = `Ваш выбор (0-6):
+// 1. Сложение 2-х чисел
+// 2. Разность 2-х чисел
+// 3. Произведение 2-х чисел
+// 4. Деление 2-х чисел
+// 5. Возведение числа в n-ю степень
+// 6. Вычисление корня n-й степени
+// 0. Отмена`;
+
+// let num1, num2;
+// let result; //сумма, разность, произведение...
+
+// do {
+//   let operation = prompt(menu, "0");
+
+//   switch(operation) {
+//     case "1": num1 = +prompt("Первое число:");
+//               num2 = +prompt("Второе число:");
+
+//               result = num1 + num2;
+//               alert(`Сумма чисел = ${result}`);
+//               break;
+//     case "2": num1 = prompt("Первое число:");
+//               num2 = prompt("Второе число:");
+
+//               result = num1 - num2;
+//               alert(`Разность чисел = ${result}`);
+//               break;
+//     case "3": num1 = prompt("Первое число:");
+//               num2 = prompt("Второе число:");
+
+//               result = num1 * num2;
+//               alert(`Произведение чисел = ${result}`);
+//               break;
+//     case "4": num1 = prompt("Первое число:");
+//               num2 = prompt("Второе число:");
+
+//               if(num2 != 0) {
+//                 result = num1 / num2;
+//                 alert(`Частное 2-х чисел = ${result.toFixed(2)}`);
+//               }
+//               else {
+//                 alert(`Делить на 0 нельзя!`);
+//               }
+//               break;
+//     case "5": num1 = prompt("Число:");
+//               num2 = prompt("Степень:");
+
+//               if(num2 < 0) {
+//                 result = Math.pow(num1, num2).toFixed(4);  
+//               }
+//               else {
+//                 // result = num1**num2;
+//                 result = Math.pow(num1, num2);
+//               }
+
+//               alert(`Число ${num1} в степени ${num2} = ${result}`);
+//               break;
+//     case "6": num1 = prompt("Число:");
+//               num2 = prompt("Степень корня:");
+
+//               result = Math.pow(num1, 1 / num2);
+//               alert(`Корень степени ${num2} из числа ${num1} = ${result}`);
+
+//               break;
+
+//     //отмена (закрытие меню)
+//     case "0": 
+//     case null: cancel = false;
+//               break;
+//     default:  alert("Ошибка! Неверный выбор!!!");
+//               break;
+//   }
+// } while(cancel);
