@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача № 10</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <h1>Задача № 10</h1>
+  <p>Даны два массива: ['a', 'b', 'c'] и [1, 2, 3]. Объедините их вместе. </p>
+  <div class="code">
+    <span>//  Создаём и инициализируем два массива:<br> 
+      //    .Вариант № 1<br>
+      
+      let myArrayString = ["a", "b", "c"];<br>
+      let myArrayNumber = [1, 2, 3];<br>
+      let unification = [];<br>
+      //  ОбЪединяем два массива в один многомерный<br>
+      
+      unification.push (myArrayString, myArrayNumber);<br>
+      
+      console.log (unification);<br></span>
+      <span>
+        //    .Вариант № 2<br>
+let arrString = ["a", "b", "c"];<br>
+let arrNumber = [10, 20, 30];<br>
+let unification = [];<br>
+
+unification = arrString.concat(arrNumber);<br>
+console.log (unification);<br>
+      </span>
+  </div>
+  <a class="return" href="../js.html">Назад</a>
+  <script src="js/tasks_10.js"></script>
+</body>
+
+</html>

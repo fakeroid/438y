@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача № 9</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <h1>Задача № 9</h1>
+  <p>Дан массив с элементами 'Привет, ', 'мир' и '!'. 
+    Необходимо вывести на экран фразу 'Привет, мир!'. </p>
+    <div class="code">
+      <span>//  Обьявляем массив<br>
+        let salute = ["Привет", "Мир", "!","Как жаль", ",", "что Вы сегодня не в духе!"];<br>
+        
+        //  Приглашаем пользователя поприветствовать Мир!<br>
+        let greeting = confirm("Вы готовы поприветствовать Мир? ");<br>
+        
+        //  Создаём ветвление для вывода на дисплей<br>
+        if (greeting == true) {<br>
+          alert(`${salute[0]} ${salute[1]} ${salute[2]}`);<br>
+        }
+          else {
+            alert(`${salute[3]} ${salute[4]} ${salute[5]}`);<br>
+          }</span>
+    </div>
+    <a class="return" href="../js.html">Назад</a>
+
+    <script src="js/tasks_9.js"></script>
+</body>
+
+</html>
