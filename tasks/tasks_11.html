@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача № 11</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <h1>Задача № 11</h1>
+  <p>Напишите фрагмент кода (группу комманд), который будет присваивать
+    значения 5 и 9 двум переменным, а затем третья переменная будет получать
+    значение, равное сумме значений первых двух переменных. Вывести на
+    экран значение третьей переменной. </p>
+  <code class="code">
+    <samp>      //  Вариант № 1<br>
+
+      //  Создаём переменные (а), (b) и (c)<br>
+      
+      let a, b, c;<br>
+      
+      //  Спрашиваем у пользователя: нужно ли ему что-то вычисить?<br>
+      
+      let question = confirm("Go to calculations: ?");<br>
+      
+      if (question == true) {
+        a = prompt("Enter the numbet A: ");
+        b = prompt("Enter the number B: ");<br>
+        c = prompt(`Какую операцию произвести:\n<br>
+          1 сложение\n<br>
+          2 вычитание\n<br>
+          3 умножение\n<br>
+          4 деление<br>
+          `);<br>
+      }<br>
+      
+      if (!a && typeof a == "object" || !b && typeof b == "object") {<br>
+        alert("You canceled!");<br>
+      } <br>
+      else {<br>
+        if (a == "" || b == "" || c == "") {<br>
+          alert("You not enter anything!");<br>
+        } else {<br>
+          if (isNaN(+a) || isNaN(+b) || isNaN(+c)) {<br>
+            alert("It\`s not a number!");<br>
+          } else {<br>
+            let calculyte = 0;<br>
+            switch (c) {<br>
+              case "1":<br>
+                calculyte = a + b;<br>
+                alert(`Сумма А и B = ${calculyte}`);<br>
+                break;<br>
+      
+              case "2":<br>
+                calculyte = a - b;<br>
+                alert(`Разность A и B = ${calculyte}`);<br>
+                break;<br>
+              case "3":<br>
+                calculyte = a * b;<br>
+                alert(`Произведение А и В = ${calculyte}`);<br>
+                break;<br>
+              case "4":<br>
+                calculyte = a / b;<br>
+                alert( `Частное А и В = ${calculyte}`);<br>
+                //отмена (закрытие меню)<br>
+              case "0":<br>
+              case null:<br>
+                cancel = false;<br>
+                break;<br>
+              default:<br>
+                alert("Ошибка! Неверный выбор!!!");<br>
+                break;<br>
+            }<br>
+          }<br>
+        }<br>
+      
+      }<br>******
+      //    ***************** Вариант № 2<br>
+
+      let str = [];<br>
+      let num = [];<br>
+      
+      //   ВВодим переменные и проверяем кокого типа они:<br>
+      let a = +prompt(`ВВедите значение 1: ?`);<br>
+      if(isNaN(+a)) {<br>
+        str.unshift(a);<br>
+        alert(`${str} -  Это не число!!!`);<br>
+      }<br>
+      else {<br>
+        num.unshift(a);<br>
+        let b = +prompt(`ВВедите значение 2: ?`);<br>
+        if (isNaN(+b)) {<br>
+          str.push(b);<br>
+          alert(`${str} -  Это не число!!!`);<br>
+        }<br>
+        else {<br>
+          num.push(b);<br>
+          let sum;<br>
+          alert(`Вы ввели в массив Num два числа: ${num}`);<br>
+          alert(`А теперь мы их сложим ${num[0]} + ${num[1]} = ${sum = a + b} `);<br>
+        }<br>
+      }</samp>
+  </code>
+  <a class="return" href="../js.html">Вернуться</a>
+  <script src="js/tasks_11.js"></script>
+</body>
+
+</html>

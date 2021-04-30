@@ -1,14 +1,3 @@
-//    Array № 1
-
-let array = [];
-
-for (let i = 0; i <= 10; i++) {
-  array[i] = i;
-
-  console.log(`${i + 1}. ${array[i]}`);
-  }
-  alert(array);
-
 
 //      Array № 2
 

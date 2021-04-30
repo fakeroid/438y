@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача № 3</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Задача № 3</h1>
+  <p>Пользователь вводит сумму вклада и процент, который
+     будет начисляться ежегодно. Отобразить размер вклада поочередно на ближайшие 5 лет.</p>
+  <code class="code">
+    <samp>let result; // Итоговая строка вывода<br>
+      let period = +prompt("Введите срок вклада: ");<br>
+      let contribution = +prompt("Введите сумму вашего вклада:");<br>
+      let percentages = +prompt("ВВедите процентную ставку на ваш депозит: "); // Проценты по вкладу<br>
+      
+        if (!contribution && typeof contribution == "object") {<br>
+            alert ("Вы отменили сделку!!!");<br>
+        }<br>
+      
+        else <br>
+          if (contribution == "") {<br>
+              alert ("вы ни чего не ввели!!!");<br>
+            }<br>
+      
+            else<br>
+              if(isNaN(+contribution || +percentages || +period)) {<br>
+                alert ("Это не сумма!!!");<br>
+              }
+                else {<br>
+                  for(let i = 0; i < period; i++) {<br>
+                    contribution += contribution * percentages / 100;<br>
+                    result +=`ваш вклад увеличивался ${i} год: ${contribution}\n`;<br>
+                  }<br>
+                    alert(result);<br>
+              }  </samp>
+  </code>
+  <a class="return" href="../js.html">Вернуться</a>
+  <script src="js/tasks_3.js"></script>
+</body>
+</html>

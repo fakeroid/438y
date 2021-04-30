@@ -25,33 +25,6 @@
 //Пользователь вводит сумму вклада и процент, который будет начисляться
 // ежегодно. Отобразить размер вклада поочередно на ближайшие 5 лет. 
 
-//                ****** Решение
-
-// let result; // Итоговая строка вывода
-// let period = +prompt("Введите срок вклада: ");
-// let contribution = +prompt("Введите сумму вашего вклада:");
-// let percentages = +prompt("ВВедите процентную ставку на ваш депозит: "); // Проценты по вкладу
-
-//   if (!contribution && typeof contribution == "object") {
-//       alert ("Вы отменили сделку!!!");
-//   }
-
-//   else 
-//     if (contribution == "") {
-//         alert ("вы ни чего не ввели!!!");
-//       }
-
-//       else 
-//         if(isNaN(+contribution || +percentages || +period)) {
-//           alert ("Это не сумма!!!");
-//         }
-//           else {
-//             for(let i = 0; i < period; i++) {
-//               contribution += contribution * percentages / 100;
-//               result +=`ваш вклад увеличивался ${i} год: ${contribution}\n`;
-//             }
-//               alert(result);
-//         }     
 
 
 
@@ -62,30 +35,28 @@
 
 // let kursDollara = 74.8;
 // let kursEuro = 90.5;
-// let sumDollars = 0, sumEuro = 0;
+// let sumDollars = 0,
+//   sumEuro = 0;
 
 // let rubles = prompt("Сумма в рублях:");
 
-// if(!rubles && typeof rubles == "object") {
+// if (!rubles && typeof rubles == "object") {
 //   alert("Вы отменили!!!");
-// }
-// else {
+// } else {
 
-//   if(rubles == "") {
+//   if (rubles == "") {
 //     alert("Вы ничего не ввели!!!");
-//   }
-//   else {
-//     if(isNaN(+rubles)) {
+//   } else {
+//     if (isNaN(+rubles)) {
 //       alert("Это не число!");
-//     }
-//     else {
-//       sumDollars = (rubles/kursDollara).toFixed(2);
-//       sumEuro = (rubles/kursEuro).toFixed(2);
+//     } else {
+//       sumDollars = (rubles / kursDollara).toFixed(2);
+//       sumEuro = (rubles / kursEuro).toFixed(2);
 
 //       alert(`Сумма в долларах = ${sumDollars}$, сумма в евро = ${sumEuro}\u20AC`);
 //     }
 //   }
-// } 
+// }
 
 
 //            Задача № 4 
@@ -117,66 +88,6 @@
 
 
 //    калькулятор:
-//    Сложение 2-х чисел
-//    
-
-// let cancel = true;
-// let menu = `Ваш выбор (0 - 6):
-//     1. Сложение двух чисел
-//     2. Разность двух чисел
-//     3. Произведение двух чисел
-//     4. Деление двух чисел
-//     5. Возведение в степень
-//     6.вычисление корня n степени
-//     0.Отмена`;
-
-// let result;
-// let num1, num2;
-
-// do {
-//   let operation = +prompt(menu, "0");
-
-//   switch (operation) {
-//     case "1":
-//       num1 = +prompt("Первое число: ");
-//       num2 = +prompt("Веорое число: ");
-
-//       result = num1 + num2;
-//       alert(`Сумма чисел = ${result}`);
-//       break;
-//     case "2":
-//       num1 = +prompt("Первое число:");
-//       num2 = +prompt("Веорое число: ");
-
-//       result = num1 - num2;
-//       alert(`Разность чисел = ${result}`);
-//       break;
-//     case " 3 ":
-//       num1 = +prompt("Первое число:");
-//       num2 = +prompt("Веорое число: ");
-
-//       result = num1 * num2;
-//       alert(`Произведение чисел = ${result}`);
-//       break;
-//     case " 4 ":
-//       num1 = +prompt("Первое число:");
-//       num2 = +prompt("Веорое число: ");
-
-//       result = num1 / num2;
-//       alert(`Деление чисел = ${result}`);
-//       break;
-//     case " 5 ":
-//       break;
-//     case " 6 ":
-//       break;
-//       //Сброс меню
-//     case " 0 ":
-//       break;
-//     case null:
-//       cancel = false
-//       break;
-//   }
-// } while (cancel);
 
 
 //**** Мини-калькулятор ****
@@ -265,4 +176,3 @@
 
 
 //*********************************************** */
-
