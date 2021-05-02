@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача № 6</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Колькулятор</h1>
+  <p></p>
+  <code class="code">
+    <samp>//            *******Калькулятор*******<br>
+
+      let cancel = true;<br>
+      let menu = `Ваш выбор (0-6):<br>
+      1. Сложение 2-х чисел<br>
+      2. Разность 2-х чисел<br>
+      3. Произведение 2-х чисел<br>
+      4. Деление 2-х чисел<br>
+      5. Возведение числа в n-ю степень<br>
+      6. Вычисление корня n-й степени<br>
+      0. Отмена`;<br>
+      <br>
+      let result;<br>
+      let params = [];<br>
+      
+      do {<br>
+        let operation = prompt(menu, "0");<br>
+        switch(operation) {<br>
+          case "1": params = getParametrs(operation);<br>
+                    result = getResult(params, "+"); <br>           
+                    break;<br>
+      <br>
+          case "2": params = getParametrs(operation);<br>
+                    result = getResult(params, "-");<br>
+                    break;<br>
+      <br>
+          case "3": params = getParametrs(operation);<br>
+                    result = getResult(params, "*");<br>
+                    break;<br>
+      <br>
+          case "4": params = getParametrs(operation);<br>
+                    result = getResult(params, "/");<br>
+                    break;<br>
+      <br>
+          case "5": params = getParametrs(operation);<br>
+                    result = getResult(params, "^");<br>
+                    break;<br>
+      
+          case "6": params = getParametrs(operation);<br>
+                    result = getResult(params, "n");<br>
+                    break;<br>
+      <br>
+          //отмена (закрытие меню)<br>
+          case "0": <br>
+          case null: cancel = false;<br>
+                    break;<br>
+          default:  result = "Ошибка! Неверный выбор!!!";<br>
+                    break;<br>
+         }<br>
+         if(result){ <br>
+            alert(result);<br>
+         }<br>
+      } while(cancel);<br>
+      
+      <br>
+      //классический способ объявления функции - Function Declaration<br>
+      function getParametrs(oper) {<br>
+         let str1, str2;<br>
+      <br>
+         if(oper >= 1 && oper <= 4) {<br>
+            str1 = "Первое число:";<br>
+            str2 = "Второе число:";<br>
+         }<br>
+         else if(oper == 5) {<br>
+            str1 = "Число:";<br>
+            str2 = "Степень:";<br>
+         }<br>
+         else {<br>
+            str1 = "Число:";<br>
+            str2 = "Степень корня:";<br>
+         }<br>
+         return checkParametrs(str1, str2);<br>
+      }<br>
+      <br>
+      function checkParametrs(str1, str2) {<br>
+         let p1, p2;<br>
+         let cancel;<br>
+      <br>
+         do {<br>
+            cancel = false;<br>
+            p1 = +prompt(str1);<br>
+      <br>
+            if(p1 == 0) {<br>
+               p1 = undefined;<br>
+               break;<br>
+            }
+            if(isNaN(p1)) {<br>
+               alert("Вы ввели не число!");<br>
+               cancel = true;<br>
+            }<br>
+            else {<br>
+               do {<br>
+                  cancel = false;<br>
+                  p2 = +prompt(str2);<br>
+      <br>
+                  if(p2 == 0) {<br>
+                     p2 = undefined;<br>
+                     break;<br>
+                  }<br>
+                  if(isNaN(p2)) {<br>
+                     alert("Вы ввели не число!");<br>
+                     cancel = true;<br>
+                  }<br>
+               } while(cancel);<br>
+            }<br>
+         } while(cancel);<br>
+      <br>
+         return [p1, p2];<br>
+      }<br>
+      <br>
+      function getResult(params, oper) {<br>
+         let result;<br>
+         let p1 = params[0], p2 = params[1];<br>
+      <br>
+         if( (typeof p1).toString() == "undefined" || (typeof p2).toString() == "undefined") {<br>
+            result = "Вы отменили ввод!";<br>
+         }<br>
+         else {<br>
+            switch(oper) {<br>
+               case "+": result = `Сумма чисел = ${p1 + p2}`;<br>
+                        break;<br>
+      <br>
+               case "-": result = `Разность чисел = ${p1 - p2}`;<br>
+                        break;<br>
+      <br>
+               case "*": result = `Произведение чисел = ${p1 * p2}`;<br>
+                        break;<br>
+      <br>
+               case "/": if(p2 != 0) {<br>
+                           result = `Частное 2-х чисел = ${(p1 / p2).toFixed(4)}`;<br>
+                        }<br>
+                        else {<br>
+                           result = "Делить на 0 нельзя!";<br>
+                        }<br>
+                        break;<br>
+      <br>
+               case "^": if(p2 < 0) {<br>
+                           result = `Число ${p1} в степени ${p2} = ${(p1**p2).toFixed(4)}`; <br> 
+                        }<br>
+                        else {<br>
+                           result = `Число ${p1} в степени ${p2} = ${p1**p2}`;<br>
+                        }<br>
+                        break;<br>
+      <br>
+               case "n": result = `Корень степени ${p2} из числа ${p1} = ${p1**(1 / p2)}`; <br>     
+                        break;<br>
+            }<br>
+         }<br>
+      <br>
+         return result;<br>
+      }</samp>
+  </code>
+  <a class="return" href="../js.html">Вернуться</a>
+  <script src="js/function_1.js"></script>
+</body>
+</html>
