@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача № 17</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header_tasks">
+    <div class="container">
+      <h1>Задачи</h1>
+      <h2>Задача № 17-18</h2>
+      <p>Напишите фрагмент кода, который принимает от пользователя число и если число
+        четное то программа выводит на экран число, которое больше введенного с клавиатуры
+        на 10, в противном случае выводит на экран число в 10 раз больше введенного. </p>
+      <p>Напишите фрагмент кода, который принимает от пользователя число и выводит на
+        экран новое число, которое больше введенного с клавиатуры в 10 раз.</p>
+      <h2>Задача № 19</h2>
+      <p>Напишите код, который принимает от пользователя число и затем выводит на экран
+        следующие три значения (все – в одной строке, разделенные пробелом): число,
+        меньше введенного с клавиатуры на 1, число, введенное с клавиатуры, и число,
+        больше введенного с клавиатуры на 1.</p>
+      <code class="code">
+
+        <samp> Задачи № 17-18<br>
+          <br>
+          let a = Number(prompt("Enter the number A: ?"));<br>
+          <br>
+          a % 2 == 0 ? alert(`${" "}Решение задачи № 17 \n${a} + 10 = ${a + 10}`):<br>
+          alert(`${" "}Решение задачи № 17 \n${a} * 10 = ${a * 10}`);<br>
+        </samp>
+        <samp> Задача № 19<br>
+          <br>
+          let num = +prompt("Введите число А: ");<br>
+          <br>
+          let randomNumber = function(min, max) {<br>
+          return Math.floor(Math.random() * (max - min + 1) +min);<br>
+          };<br>
+          let n = randomNumber(1, 10);<br>
+          <br>
+          let numMas = num => {<br>
+          let mas = [];<br>
+          let numbOne = num;<br>
+          let numbTwo = num - 1;<br>
+          <br>
+          for(let i = 0; i < n; i++) {<br>
+            mas.push(numbOne + i);<br>
+            // numbOne += num;<br>
+            mas.unshift(numbTwo - i);<br>
+            // numbTwo -= num;<br>
+            }<br>
+            return mas;<br>
+            }<br>
+            alert(numMas(num));</samp>
+      </code>
+      <a class="return" href="../js.html">Вернуться</a>
+    </div>
+  </header>
+  <script src="js/tasks_17.js"></script>
+</body>
+
+</html>

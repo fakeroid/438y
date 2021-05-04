@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача № 14-16</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header_tasks">
+    <div class="container">
+      <h1>Задачи</h1>
+      <h2>Задача № 14</h2>
+      <p>Напишите фрагмент кода, который присваивает переменной х
+        значение типа Number, а затем присваивает переменной треть
+        от значения переменной х. Выводить результат на экран.</p>
+      <code class="code">
+        <samp>
+          let num = 0;<br>
+          let sum = 0;<br>
+          let str = prompt("Введите любое предложение\n и убедитесь? что JavaScript может его пощитать: ");<br>
+          <br>
+          for (let i = 0; i < str.length; i++) { sum +=i;<br>
+            }<br>
+            num = str.length / 3;
+            alert(`треть длины вашего предложения - ${str} = ${num} ,\n а сумма чисел его длинны = ${sum}`);<br>
+            <br>
+        </samp>
+      </code>
+      <a class="return" href="../js.html">Вернуться</a>
+
+      <h2>Задача № 15</h2>
+      <p>Напишите фрагмент кода, который присваивает переменной х значение 9, а затем выводит на
+        экран: в первой строке – это значение с поясняющей надписью (например, «значение
+        х равно 9»), а во второй – квадрат этого значения (тоже с поясняющей надписью).</p>
+        <h2>Задача № 16</h2>
+      <p>Напишите фрагмент кода, который принимает от пользователя число и выводит
+        экран число, которое больше введенного с клавиатуры на 10.</p>
+      <code class="code">
+        <samp>
+          Задача № 15, 16<br>
+          <br>
+          let sentences = new Map([<br>
+            ["explainOne", "Значение длины предложения Х ="],<br>
+            ["explainTwo", "Возведение длины предложения (Х) в степень"],<br>
+            ["explainThree", "Сума Х и числ  "]<br>
+          ]);<br>
+          <br>
+          str = prompt("Введите новое предложени: ");
+          //    Создадим случайное число
+          let randomNumber = function (min, max) {<br>
+            return Math.floor(Math.random() * (max - min + 1) + min);<br>
+          };<br>
+          <br>
+          let n = randomNumber(2, 19);<br>
+          let strTwo = str;<br>
+          let strThree = str;<br>
+          <br>
+          //  sentences.set("sentences", strTwo);// добавление элемента по ключу "sentences"<br>
+          sentences.set("longSentOne", str.length);<br>
+          sentences.set("longSentTwo", strTwo.length ** n); //<br>
+          sentences.set("longThree", strThree.length + n);<br>
+          <br>
+          console.log(sentences);//   Выводит значения в корсоль.<br>
+          <br>
+          alert(`${sentences.get("explainOne")} ${sentences.get("longSentOne")}\n<br>
+           ${sentences.get("explainTwo")} n = ${sentences.get("longSentTwo")}\n<br>
+           ${sentences.get("explainThree")} n = ${sentences.get("longThree")}`); // Возвращение элемента по ключу "explainOne"<br>
+          
+        </samp>
+      </code>
+      <a class="return" href="../js.html">Вернуться</a>
+
+    </div>
+  </header>
+  <script src="js/tasks_14.js"></script>
+</body>
+
+</html>

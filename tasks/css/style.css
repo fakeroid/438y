@@ -263,7 +263,7 @@ code {
   flex-direction: column;
   align-items: center;
 
-  width: 40%;
+  width: 50%;
   text-align: start;
   padding: 25px 10px 25px 40px;
   background-color: #ffebcd;
@@ -282,6 +282,10 @@ code {
 	padding-bottom: 130px;
 }
 
+.header_tasks p {
+  color: #fff;
+}
+
 .code span {
   font-style: normal;
   font-size: 1.1rem;
@@ -289,6 +293,12 @@ code {
   margin-bottom: 15px;
 }
 
+.code samp {
+  font-style: normal;
+  font-size: 1.1rem;
+  line-height: 120%;
+  margin-bottom: 15px;
+}
 
 .return {
 	display: inline-block;

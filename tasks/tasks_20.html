@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача № 20</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header_tasks">
+    <div class="container">
+      <h1>Задачи</h1>
+  <h2>Задача № 20-21</h2>
+  <p>Напишите код, который принимает от пользователя число,
+    представляющее собой массу тела в граммах, и выводящую на
+     экран массу этого тела в килограммах. </p>
+     <p>---------------------------------------------</p>
+     <p>Напишите код, который принимает от пользователя число,
+        представляющее собой промежуток времени в часах, и выводит 
+        на экран этот же промежуток времени, но выраженный в секундах.</p>
+  <code class="code">
+    <samp>//        Задача № 20<br>
+<br>
+      let walNums = +prompt("Введите ваш вес в килограммах: ");<br>
+      let converterMas =function (walNums) {<br>
+        let mas = [];<br>
+        let kilograms = walNums * 1000;<br>
+        let str = "Ваш вес в граммах = " + kilograms;<br>
+         mas.unshift(str);<br>
+         let pounds = walNums / 2.2046;<br>
+         str =" \n Ваш вес в фунтах = " + pounds;<br>
+        mas.push(str);<br>
+        return mas;<br>
+      <br>
+      }<br>
+      <br>
+      alert(converterMas(walNums));<br>
+       <br>
+      //      Задача № 21 <br>
+      <br>
+      let timesNums = +prompt("Введите сколько времени вы затрачиваете на обуд: ");<br>
+      <br>
+      let converterTimes = function(timesNums) {<br>
+        let mas = [];<br>
+          let seconds = timesNums * 3600;<br>
+          str ="Вы тратите на обед" + seconds + "драгоценных секунд.";<br>
+          mas.push(str);<br>
+          return mas;<br>
+      }<br>
+      <br>
+      alert(converterTimes(timesNums));<br>
+      </samp>
+      <samp>     
+        </samp>
+  </code>
+  <a class="return" href="../js.html">Вернуться</a>
+</div>
+</header>
+  <script src="js/tasks_20.js"></script>
+</body>
+
+</html>

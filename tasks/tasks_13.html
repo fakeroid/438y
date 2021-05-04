@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача № 13</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header_tasks">
+    <div class="container">
+  <h1>Задача № 13</h1>
+  <p>Напишите фрагмент кода, в котором переменным а и b будут присваиваться числовые
+     значения пользователем, с помощью команды (prompt()). Далее необходимо проверить,
+      что число попадает в диапазон "однозначное положительное число". Затем следует
+       присвоить переменной с значение, составленное следующим образом: значение 
+       переменной а является числом десятков, значение переменной b является числом 
+       единиц. Например, если переменной а присваивается значение 4, а переменной b – 
+       значение 7, то переменная с получает значение 47. Вывести результат на экран</p>
+  <code class="code">
+    <samp>let a = +prompt("Введите число десятков от 0 до 9: а ");<br>
+      if (a < 0 || a > 9) {<br>
+        alert("Это не однозначное положительное число");<br>
+      }<br>
+      else {<br>
+        a = a * 10;<br>
+        let b = +prompt("Введите число едениц от 0 до 9: b ");<br>
+          if (b < 0 || b > 9) {<br>
+            alert("Это не однозначное положительное число");<br>
+          }<br>
+          else {<br>
+            let c = a + b;<br>
+            alert(`Сумма составных чисел a и b = ${c}`);<br>
+          }<br>
+        }</samp>
+      <samp>     
+        </samp>
+  </code>
+  <a class="return" href="../js.html">Вернуться</a>
+</div>
+</header>
+  <script src="js/tasks_13.js"></script>
+</body>
+
+</html>
