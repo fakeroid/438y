@@ -5,23 +5,55 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Задача № 23</title>
+  <title>Задача № 23-25</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="header_tasks">
     <div class="container">
-  <h1>Задача № 23</h1>
-  <p></p>
-  <code class="code">
-    <samp></samp>
-      <samp>     
+      <h1>Задачи</h1>
+      <h2>Задача № 23-25</h2>
+      <p>Кинетическая энергия тела подсчитывается как половина произведения массы тела на
+        квадрат скорости тела. Напишите программу, которая принимает с клавиатуры два числа,
+        первое из которых – масса тела, а второе – его скорость. Программа должна подсчитать
+        и вывести на экран значение кинетической энергии тела.</p>
+      
+      <p>Напишите код, который сначала заносит в переменную строковое значение Привет, а
+        затем принимает с клавиатуры ваше имя. Программа должна вывести на экран в одной
+        строке сообщение, составленное из строкового значения Привет, знака "запятая" и
+        вашего имени. </p>
+      
+      <p>Напишите код, который принимает от пользователя фамилию, имя и отчество,
+        а затем выводит на экран фамилию и инициалы (без пробела между инициалами).</p>
+      <code class="code">
+        <samp>      Объединим две задачи 22 и 23<br>
+          let greeting = confirm("Привет! Познакомимся ? ");<br>
+          if (greeting == false) {<br>
+            alert("Познакомимся в следующий раз!")<br>
+          } 
+          else {<br>
+            let yourName = prompt("Как Вас зовут ? ");<br>
+            greeting = confirm(`${yourName} , приятно познакомиться. Давай вместе решим задачу ?`);<br>
+            if (greeting == false) {<br>
+              alert(`${yourName} , до встречи`)<br>
+            } 
+            else {<br>
+              let m = +prompt(`${yourName} , впиши пожалуйста массу тела: `);<br>
+              let v = +prompt(`А теперь за одно и скорость его движения: `);<br>
+              let e = m * (v ** 2) / 2;<br>
+              alert(`${yourName} , сейчас мы вычислим кинетическую энергию тела по формуле: Е = m*v^2/2 \n`);<br>
+              let surnames = prompt(`${yourName} , пока машина решает задачу я хотел бы заполнить анкету,какое у тебя Фамилие ?`);<br>
+              let  patronymic = prompt(`Отчество ?`);<br>
+              alert(`${surnames} ${patronymic[0]}${yourName[0]} вот и ответ подоспел Е(k) = ${e}Dg , Спасибо!!!`);<br>
+            }<br>
+          }</samp>
+        <samp>
         </samp>
-  </code>
-  <a class="return" href="../js.html">Вернуться</a>
-</div>
-</header>
+      </code>
+      <a class="return" href="../js.html">Вернуться</a>
+    </div>
+  </header>
   <script src="js/tasks_23.js"></script>
 </body>
 

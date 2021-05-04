@@ -13,52 +13,76 @@
   <header class="header_tasks">
     <div class="container">
       <h1>Задачи</h1>
-  <h2>Задача № 20-21</h2>
-  <p>Напишите код, который принимает от пользователя число,
-    представляющее собой массу тела в граммах, и выводящую на
-     экран массу этого тела в килограммах. </p>
-     <p>---------------------------------------------</p>
-     <p>Напишите код, который принимает от пользователя число,
-        представляющее собой промежуток времени в часах, и выводит 
+      <h2>Задача № 20-22</h2>
+      <p>Напишите код, который принимает от пользователя число,
+        представляющее собой массу тела в граммах, и выводящую на
+        экран массу этого тела в килограммах. </p>
+      <p>---------------------------------------------</p>
+      <p>Напишите код, который принимает от пользователя число,
+        представляющее собой промежуток времени в часах, и выводит
         на экран этот же промежуток времени, но выраженный в секундах.</p>
-  <code class="code">
-    <samp>//        Задача № 20<br>
-<br>
-      let walNums = +prompt("Введите ваш вес в килограммах: ");<br>
-      let converterMas =function (walNums) {<br>
-        let mas = [];<br>
-        let kilograms = walNums * 1000;<br>
-        let str = "Ваш вес в граммах = " + kilograms;<br>
-         mas.unshift(str);<br>
-         let pounds = walNums / 2.2046;<br>
-         str =" \n Ваш вес в фунтах = " + pounds;<br>
-        mas.push(str);<br>
-        return mas;<br>
-      <br>
-      }<br>
-      <br>
-      alert(converterMas(walNums));<br>
-       <br>
-      //      Задача № 21 <br>
-      <br>
-      let timesNums = +prompt("Введите сколько времени вы затрачиваете на обуд: ");<br>
-      <br>
-      let converterTimes = function(timesNums) {<br>
-        let mas = [];<br>
+      <p>--------------------------------------------</p>
+      <p>Напишите программу, которая принимает с клавиатуры два числа, образующих ответ на вопрос
+        «который час?» (первое – часы, второе минуты, например, 15 и 42) и выводит на экран следующие
+        значения (каждое – в отдельной строке): сколько секунд прошло с полуночи да «данного момента»
+        и сколько минут прошло за это же время, а также сколько минут осталось до полуночи. </p>
+      <code class="code">
+        <samp> Задача № 20<br>
+          <br>
+          let walNums = +prompt("Введите ваш вес в килограммах: ");<br>
+          let converterMas =function (walNums) {<br>
+          let mas = [];<br>
+          let kilograms = walNums * 1000;<br>
+          let str = "Ваш вес в граммах = " + kilograms;<br>
+          mas.unshift(str);<br>
+          let pounds = walNums / 2.2046;<br>
+          str =" \n Ваш вес в фунтах = " + pounds;<br>
+          mas.push(str);<br>
+          return mas;<br>
+          }<br>
+          alert(converterMas(walNums));<br>
+          <br>
+                  Задача № 21 <br>
+          <br>
+          let timesNums = +prompt("Введите сколько времени вы затрачиваете на обуд: ");<br>
+          <br>
+          let converterTimes = function(timesNums) {<br>
+          let mas = [];<br>
           let seconds = timesNums * 3600;<br>
           str ="Вы тратите на обед" + seconds + "драгоценных секунд.";<br>
           mas.push(str);<br>
           return mas;<br>
-      }<br>
-      <br>
-      alert(converterTimes(timesNums));<br>
-      </samp>
-      <samp>     
+          }<br>
+          alert(converterTimes(timesNums));
         </samp>
-  </code>
-  <a class="return" href="../js.html">Вернуться</a>
-</div>
-</header>
+        <samp>       Задача № 22<br>
+<br>
+          let interval = 60 * Number(prompt("Сколько часов на ваших ходиках ? "));<br>
+              interval += Number(prompt("А сколько минут ?"));<br>
+          <br>
+          if(interval == "" || interval == null) { alert("Cancellation!!!"); }<br>
+            else if (isNaN(interval)) {alert("Not a number!!!"); }<br>
+            else {<br>
+              let timeBegenning;<br>
+              let timeEnd;<br>
+          <br>
+              let timeSchedule = function(interval) {<br>
+                let mas = [];<br>
+                  seconds = interval * 60;<br>
+                  timeBegenning = "От полночи прошло " + seconds + " секунд" + "\n или " + interval +" минут";<br>
+                  let minutes = 24 * 60 - interval;<br>
+                  timeEnd = "\n a до слудующей полночи осталось " + minutes + "минут";<br>
+                  mas.push(timeEnd);<br>
+                  return mas;<br>
+              }<br>
+                alert(timeSchedule(interval));<br>
+            }<br>
+           
+        </samp>
+      </code>
+      <a class="return" href="../js.html">Вернуться</a>
+    </div>
+  </header>
   <script src="js/tasks_20.js"></script>
 </body>
 

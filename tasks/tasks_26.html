@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача № 26-28</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header_tasks">
+    <div class="container">
+      <h1>Задачи</h1>
+      <h2>Задача № 26-28</h2>
+      <p>Напишите код, который принимает с клавиатуры целое положительное двузначное
+        число и выводит на экран его цифры, разделенные знаком «пробел».</p>
+
+      <p>Напишите код, который принимает с клавиатуры целое положительное трехзначное
+        число и выводит на экран его цифры, разделенные знаком «пробел». </p>
+        <p>Напишите код, который принимает с клавиатуры целое положительное двузначное
+           число и выводит на экран его цифры, разделенные знаком «пробел» – но в обратном
+            порядке. То есть для числа 45 будет выведено на экран 5 4. </p>
+      <code class="code">
+        <samp>
+          Tasks 26-27<br>
+          let numb = Number(prompt("Enter a two-digit integer: "));<br>
+          <br>
+          if(numb == '' || numb == null || isNaN(numb)) { <br>
+          alert("Goodbye simpleton!");<br>
+          }<br>
+          else if(Number.isInteger(numb) == false){ <br>
+          alert(`${numb} It\`s not an integer`);<br>
+          }<br>
+          else if(numb < 0){<br>
+            alert(`${numb} this is a negative number`);<br>
+            }<br>
+            else if(numb < 10){<br>
+              alert(`This is a not two-digit integer`);<br>
+              }<br>
+              else if(numb >= 10 && numb <= 99){<br>
+                let str = "" + numb;<br>
+                alert(str[0] + " " + str[1]); <br>
+                }<br>
+                else if(numb >= 100 && numb <= 999){<br>
+                  let str = "" + numb;
+                  alert(str[0] + " " + str[1] + " " + str[2]); <br>
+                  }<br>
+        </samp>
+        <samp>
+          Tasks 28 <br>
+          let string = prompt("Enter a number ");<br>
+          let stringNum <br>
+          for(let i = (string.length -1); i >= 0; i-- ){<br>
+          stringNum +=" " + string[i];<br>
+          }<br>
+          alert(stringNum); <br>
+        </samp>
+      </code>
+      <a class="return" href="../js.html">Вернуться</a>
+    </div>
+  </header>
+  <script src="js/tasks_26.js"></script>
+</body>
+
+</html>
