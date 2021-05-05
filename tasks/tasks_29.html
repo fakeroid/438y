@@ -14,11 +14,59 @@
     <div class="container">
       <h1>Задачи</h1>
   <h2>Задача № 29-31</h2>
-  <p></p>
+  <p> <strong>Задача № 29</strong> Напишите код, который принимает с клавиатуры целое положительное двузначное число и 
+    выводит его на экран в «полном виде»: например, для числа 34 это будет выглядеть как 30 
+    4. </p>
+    <p><strong>Задача № 30</strong>Напишите код, который принимает с клавиатуры целое положительное трехзначное число и
+       выводит его на экран в «полном виде»: например, для числа 364 это будет выглядеть как 300 60 4. </p>
+    <p><strong>Задача № 31</strong>Напишите код, который принимает от пользователя целое положительное двузначное число.
+       Затем следует построить новое значение, составленное из цифр числа, введенного с клавиатуры, но в обратном порядке.
+        После этого новое значение следует увеличить на 8 и окончательный результат вывести на экран. То есть для 
+        числа 37 следует построить число 73 и вывести на экран 81.  </p>
   <code class="code">
-    <samp></samp>
-      <samp>     
-        </samp>
+    <samp>
+      //			Tasks  29-31<br>
+//			tasks 29<br>
+let a, b, c;<br>
+let str;<br>
+let numb = Number(prompt("Enter a positivfe two-digit integer"));<br>
+<br>
+if (numb == "" || numb === null) {<br>
+	alert("Empty!!!")<br>
+}<br>
+else if (isNaN(numb)) {<br>
+	alert("Not a number!!!");<br>
+ }<br>
+if (numb < 0 || numb < 10) {<br>
+	alert("Not a positive number or less then 10!!!");<br>
+}<br>
+else if (numb % 1 !== 0) {<br>
+	alert("Not a integer!!!");<br>
+}<br>
+else if (numb >= 10 && numb <= 99) {<br>
+	a = numb - numb % 10;<br>
+	b = numb - a;<br>
+	str = "" + a + " " + b;<br>
+	alert(str);<br>
+<br>
+//		+ tasks 31<br>
+	b = numb - numb % 10;<br>
+	a = (numb - b) * 10;<br>
+	str = a + b / 10 + 8;<br>
+	alert(str);<br>
+}<br>
+<br>
+//		+ tasks 30<br>
+else if (numb >=100 && numb <= 999) {<br>
+	b = numb - numb % 10;<br>
+	c = numb - b;<br>
+	a = b - b % 100;<br>
+	b = numb - (a + c);<br>
+	str = "" + a + " " + b + " " + c;<br>
+	alert(str);<br>
+}<br>
+    </samp>
+      
   </code>
   <a class="return" href="../js.html">Вернуться</a>
 </div>
