@@ -13,16 +13,92 @@
   <header class="header_tasks">
     <div class="container">
       <h1>Задачи</h1>
-  <h2>Задача № 32-34</h2>
-  <p></p>
-  <code class="code">
-    <samp></samp>
-      <samp>     
+      <h2>Задача № 32-34</h2>
+      <p><strong>Задача № 32</strong> Назовем «весом числа» сумму его цифр. Напишите код,
+        который принимает от пользователя число и выводит на экран его «вес». </p>
+      <p><strong>Задача № 33</strong> Дана строка. Сделайте заглавным первый символ этой
+        строки не используя цикл. Найдите два решения. </p>
+      <p><strong>Задача № 34</strong> Дан массив с числами. Проверьте, что в этом массиве
+        есть число 5. Если есть - выведите 'да', а если нет - выведите 'нет'. </p>
+      <code class="code">
+        <samp>
+          Tasks № 32, 33, 34<br>
+
+          Tasks 32<br>
+
+          let numbOne= Number(prompt("Enter one number"));<br>
+          let numbTwo = Number(prompt("Enter two number"));<br>
+          if (isNaN(numbOne)) {<br>
+          alert("this is not a number!!!");<br>
+          }<br>
+          let sum = 0;<br>
+          let x = String(numbOne);<br>
+          for(let i = 0; i< x.length; i++) { sum +=Number(x[i]); }<br>
+            alert(`Сумма цифр первого числа=${sum}`);<br>
+            function numberSum(numbTwo){ <br>
+            let sumb=1; <br>
+            let y=String(numbTwo);<br>
+            for(let i=0; i < y.length; i++) {<br>
+              sumb *= Number(y[i]); <br>
+              } <br>
+              return sumb; <br>
+              } <br>
+              alert(`Произведение цифр второго числа=${numberSum(numbTwo)}`); </samp>
+        <samp>
+          tasks № 33<br>
+          первый способ<br>
+          let str = String(prompt("Entr string "));<br>
+          let newStr = str.replace(str[0], str[0].toUpperCase());<br>
+          alert(newStr);<br>
+          <br>
+          let strTwo = String(prompt("Введите второе предложение"));<br>
+          // второй спопоб<br>
+          let registr = strTwo => {<br>
+          if (!strTwo) return strTwo;<br>
+          <br>
+          return strTwo[0].toUpperCase()+strTwo.slice(1);<br>
+          }<br>
+          alert(registr(strTwo));<br>
         </samp>
-  </code>
-  <a class="return" href="../js.html">Вернуться</a>
-</div>
-</header>
+        <samp>
+          let leng = Number(prompt(`Создаём числовой массив и рандомно заполняем.\n<br>
+          Затем ищем в нём цифру 5. Введите длину массива: `));<br>
+
+          let mas = new Array(leng).fill(null);<br>
+          mas = mas.map(() =><br>
+          (Math.floor(Math.random() * 200) + 1));<br>
+          <br>
+          alert(mas);<br>
+
+          function sortMas(a, b){<br>
+          if (a > b){<br>
+          return 1;<br>
+          } else if (a < b) {<br>
+            return -1;<br>
+            } else if (a = b) {<br>
+            return 0;<br>
+            }<br>
+            }<br>
+            mas.sort(sortMas);<br>
+            alert(mas);<br>
+            let result = 0;<br>
+            let n = 5;<br>
+            for (let i = 0; i < mas.length; i++) {<br>
+              if(mas[i] == n) {<br>
+              result += 1;<br>
+              }<br>
+              }<br>
+              if (result !== 0) {<br>
+              alert(`В вашем массиве ${result} пятерок`);<br>
+              } else {<br>
+              alert(`В массиве нет пятерок`);<br>
+              }<br>
+
+        </samp>
+      </code>
+      <a class="return" href="../js.html">Вернуться</a>
+    </div>
+  </header>
   <script src="js/tasks_32.js"></script>
 </body>
 

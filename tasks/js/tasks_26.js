@@ -23,10 +23,10 @@ else if(numb >= 100 && numb <= 999){
 }
 
 //      Tasks 28 
-let string = prompt("Enter a number ");
-let stringNum 
-for(let i = (string.length -1); i >= 0; i-- ){
-  stringNum +=" " + string[i];
+let x = prompt("Enter a number ");
+let sum; let string = String(x);
+for(let i = string.length; i >= 0; i-- ){
+  sum +=" " + string[i];
 }
-alert(stringNum);
+alert(sum);
 
