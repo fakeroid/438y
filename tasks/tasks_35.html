@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Задача № 3-37</title>
+  <title>Задача № 35-37</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -13,16 +13,68 @@
   <header class="header_tasks">
     <div class="container">
       <h1>Задачи</h1>
-  <h2>Задача № 35-37</h2>
-  <p></p>
-  <code class="code">
-    <samp></samp>
-      <samp>     
+      <h2>Задача № 35-37</h2>
+      <p><strong>Задача № 35</strong> Сделайте функцию, которая параметрами принимает 2 числа.
+        Если эти числа равны - пусть функция вернет true, а если не равны - false. </p>
+      <p><strong>Задача № 36</strong> Заполните массив следующим образом: в первый элемент запишите
+        'x', во второй 'xx', в третий 'xxx' и так далее. </p>
+      <p><strong>Задача № 37</strong> Дан массив с числами. Создайте из него новый массив, где
+        останутся лежать только положительные числа. Создайте для этого вспомогательную функцию
+        isPositive(), которая параметром будет принимать число и возвращать true, если число положительное,
+        и false - если отрицательное. </p>
+      <code class="code">
+        <samp>
+          //			Tasks № 35<br>
+<br>
+let numbOne = Number(prompt("Для сравнения двух чисел введите первое: "));<br>
+let numbTwo = Number(prompt("А теперь введите второе: "));<br>
+let numb;<br>
+function comparingsNumb(numb){<br>
+	if(numbOne == numbTwo){<br>
+		return true;<br>
+	}<br>
+	     return false;<br>
+}<br>
+alert(comparingsNumb(numb));<br>
         </samp>
-  </code>
-  <a class="return" href="../js.html">Вернуться</a>
-</div>
-</header>
+        <samp>
+          //			Tasks № 36<br>
+<br>
+let sumb = prompt("Введите символ: ");<br>
+let num = Number(prompt("введите колличество итераций: "));<br>
+<br>
+function progresSumbol(sumb) {<br>
+	let mas = [];<br>
+	let str = sumb;<br>
+	for(let i = 0; i < num; i++) {<br>
+		mas.push(str);<br>
+		str += sumb;<br>
+	}<br>
+	return mas;<br>
+}<br>
+console.log(progresSumbol(sumb));<br>
+        </samp>
+        <samp>
+          //			tasks № 37 <br>
+<br>
+let mas = [3, -1, 5, -11, 54, 100, -34, 22, 6, 5.5, 200];<br>
+alert(`У нас есть массив mas [${mas}]. Уберем из него отрицательные числа.`);<br>
+          function isPositive(mas) {<br>
+            let positive = [];<br>
+           for(let i = 0; i < mas.length; i++) {<br>
+             if (mas[i] > 0) {<br>
+             positive.push(mas[i]);<br>
+             }<br>
+           }<br>
+           return positive;<br>
+         }<br>
+         alert(`Как видите в новом массиве newMas   [ ${isPositive(mas)} ]<br>
+          только положительные числа.\n в отличии от старого mas  ${mas}`);<br>
+        </samp>
+      </code>
+      <a class="return" href="../js.html">Вернуться</a>
+    </div>
+  </header>
   <script src="js/tasks_35.js"></script>
 </body>
 
