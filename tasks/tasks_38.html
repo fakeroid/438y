@@ -13,24 +13,67 @@
   <header class="header_tasks">
     <div class="container">
       <h1>Задачи</h1>
-  <h2>Задача № 38-40</h2>
-  <p><strong></strong></p>
-  <p><strong></strong></p>
-  <p><strong></strong></p>
-  <code class="code">
-    <samp>
+      <h2>Задача № 38-40</h2>
+      <p><strong>Задача № 38</strong> Дан массив с числами. Выведите последовательно его элементы используя рекурсию и
+        не используя цикл. </p>
+      <p><strong>Задача № 39</strong> Выведите с помощью цикла столбец чисел от 1 до 100. </p>
+      <p><strong>Задача № 40</strong> Даны картинки. Привяжите к каждой картинке событие, чтобы по клику на картинку
+        алертом выводился ее src.</p>
+      <code class="code">
+        <samp>
+          // tasks №38 <br>
+          <br>
+          let mas = [];<br>
+          <br>
+          const setElem = () => {<br>
+          for (let i = 0; i < 10; i++) {<br>
+            mas.push(Math.ceil(Math.random() * 10));<br>
+            <br>
+            mas.sort(function(a, b) {<br>
+            return a - b;<br>
+            });<br>
+            }<br>
+            }
+            <br>
+            setElem();<br>
+            <br>
+            const getElem = (index) => {<br>
+            <br>
+            if (index < (mas.length - 1)) {<br>
+              return mas[index].toString() + ', ' + getElem(++index);<br>
+              }<br>
+              return mas[index].toString() + '!';<br>
+              }<br>
+        </samp>
+        <samp>
+          tasks № 39<br>
+<br>
+          tasks № 39.1<br>
+<br>
+          let numTwo = 0;<br>
+          let str;<br>
+          let i;<br>
+          for(i = 1; i < 100; i++) { numTwo +="\n" + i; } <br>
+          alert(numTwo);<br>
+              tasks № 39.2 <br>
+<br>
+          let sumb="\n" ; <br>
+          let set=sumb=>{<br>
+          let str = 0;<br>
+          for(let i = 1; i < 100; i++) { <br>
+            str +=sumb; str +="" + i; <br>
+          } <br>
+            return str; <br>
+          } <br>
+          alert(set(sumb)); <br>
+        </samp> 
+        <br><samp>
 
-    </samp>
-      <samp> 
-
-      </samp>
-      <samp>
-
-      </samp>
-  </code>
-  <a class="return" href="../js.html">Вернуться</a>
-</div>
-</header>
+        </samp>
+      </code>
+      <a class="return" href="../js.html">Вернуться</a>
+    </div>
+  </header>
   <script src="js/tasks_38.js"></script>
 </body>
 

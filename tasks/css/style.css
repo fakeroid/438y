@@ -153,9 +153,14 @@ a:hover {
 
   color: #4512AA;
   font-style: italic;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 
   box-shadow: 1px 1px 1px rgb(73, 73, 207);
+}
+
+.project {
+  color: azure;
+  font-size: 1.1rem;
 }
 
 /*		КОНЕЦ ШАПКИ		*/

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача № 68-70</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header_tasks">
+    <div class="container">
+      <h1>Задачи</h1>
+  <h2>Задача № 68-70</h2>
+  <p><strong>Задача № 68</strong>  Дана строка 'js'. Сделайте из нее строку 'JS'. </p>
+  <p><strong>Задача № 69</strong> Дан массив [1, 2, 3]. Сделайте из него массив [3, 2, 1]. </p>
+  <p><strong>Задача № 70</strong> Получите url-адрес текущей страницы и проверьте, что строка заканчивается на .php. </p>
+  <code class="code">
+    <samp>
+
+    </samp>
+      <samp> 
+
+      </samp>
+      <samp>
+        Задача № 70<br>
+  const url = location.pathname;<br>
+<br>
+  function urlUser (url) {<br>
+  	if (url.substr(-4) == ".php") {<br>
+	  	url = "Да строка заканчивается на .php";<br>
+	  } else {<br>
+		  url = "Not a string of .php";<br>
+	  }<br>
+	  return url;<br>
+  }<br>
+<br>
+  console.log(urlUser(url));<br>
+      </samp>
+  </code>
+  <a class="return" href="../js.html">Вернуться</a>
+</div>
+</header>
+  <script src="js/tasks_68.js"></script>
+</body>
+
+</html>
