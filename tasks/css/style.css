@@ -257,6 +257,23 @@ a:hover {
 
 /* Style для доп страниц  */
 
+.btn_tasks {
+  padding: 10px 15px;
+  background-color: rgba(36, 102, 27, 0.5);
+  color: rgb(226, 202, 202);
+  font-size: 0.9rem;
+  border-radius: 45px ;
+  cursor: pointer;
+  margin-bottom: 35px;
+}
+
+.btn_tasks:hover {
+  background-color: rgba(69, 148, 58, 0.5);
+  border-bottom: 2px solid rgb(226, 202, 202);
+  color: rgba(9, 44, 80, 0.8);
+}
+
+
 code {
   display: flex;
   flex-direction: column;

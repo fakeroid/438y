@@ -1,0 +1,18 @@
+		/* Стили к задаче № 40 */
+
+.image {
+	display: block;
+	position: absolute;
+	margin: 0 auto;
+	width: 30%;
+	border-radius: 70px;
+	margin-left: 26%;
+	opacity: 90%;
+}
+
+.event {
+	display: flex;
+	position: absolute;
+	margin: 0 auto;
+	width: 30%;
+}

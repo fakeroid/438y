@@ -69,18 +69,18 @@ window.onload = function(){
 
 
 // Generate colors (as Chroma.js objects)
-var colors = paletteGenerator.generate(
-  5, // Colors
-  function(color){ // This function filters valid colors
-    var hcl = color.hcl();
-    return (hcl[0]>=330 || hcl[0]<=20)
-      && hcl[1]>=11.81 && hcl[1]<=78.35000000000001
-      && hcl[2]>=47.64 && hcl[2]<=100;
-  },
-  false, // Using Force Vector instead of k-Means
-  50, // Steps (quality)
-  false, // Ultra precision
-  'Default' // Color distance type (colorblindness)
-);
-// Sort colors by differenciation first
-colors = paletteGenerator.diffSort(colors, 'Default');
+// var colors = paletteGenerator.generate(
+//   5, // Colors
+//   function(color){ // This function filters valid colors
+//     var hcl = color.hcl();
+//     return (hcl[0]>=330 || hcl[0]<=20)
+//       && hcl[1]>=11.81 && hcl[1]<=78.35000000000001
+//       && hcl[2]>=47.64 && hcl[2]<=100;
+//   },
+//   false, // Using Force Vector instead of k-Means
+//   50, // Steps (quality)
+//   false, // Ultra precision
+//   'Default' // Color distance type (colorblindness)
+// );
+// // Sort colors by differenciation first
+// colors = paletteGenerator.diffSort(colors, 'Default');

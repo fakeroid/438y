@@ -1,5 +1,10 @@
 // //			tasks № 38 решение без рекурсии
 
+const btnOne = document.getElementById('btnOne');
+document.getElementById('btnOne').addEventListener("click", btnThirtyEight);
+
+function btnThirtyEight() {
+
 let numArr = [];
 
 for (let i = 0; i < 10; i++) {
@@ -18,6 +23,7 @@ numArr.sort(function(a, b) {
 });
 console.log(numArr);
 alert(`Выводим массив [ ${numArr} ] без рекурсии и сортируем его [ ${numArr} ]`);
+
 
 //						tasks №38  решение с рекурсией
 
@@ -45,7 +51,13 @@ const getElements = (index) => {
 
 alert(`Сортированный массив ${mas}  выведен с помощью рекурсии: ${getElements(0)}`);
 
+}
  //			tasks № 39.1
+
+ const btnTwo = document.getElementById('btnTwo');
+ document.getElementById('btnTwo').addEventListener("click", btnThirtyNine);
+ 
+ function btnThirtyNine() {
 
  let numTwo = 0;
  let str;
@@ -68,3 +80,57 @@ alert(`Сортированный массив ${mas}  выведен с пом�
  	return str;
  }
  alert(set(sumb));
+
+ }
+ //			tasks № 40 
+
+const btnThree = document.getElementById('btnThree');
+const code = document.getElementById('code');
+
+document.getElementById('btnThree').addEventListener("click", btnForty);
+
+function btnForty() {
+
+	if (!document.getElementById('image') && document.getElementById('code')) {
+		const img = document.createElement('img');
+		img.id = 'image';
+		img.alt = "Foto";
+		img.src = "img/tasks40.png";
+		img.className = "image";
+		
+		setTimeout(() =>{
+		document.getElementById('btnThree').insertAdjacentElement("afterend", img);
+		document.getElementById('code').remove();
+		document.getElementById('btnThree').textContent = "Скрыть фотографию";
+		}, 500);
+
+		img.addEventListener("click", showSrc);
+	
+	} else {
+		setTimeout(() =>{
+		document.getElementById('image').remove();
+		document.getElementById('btnThree').textContent = "Решение задачи";
+		}, 500);
+	}
+
+}
+ 
+function showSrc(e) {
+	const src = e.target.src;
+
+	showMessage(src);
+}
+
+function showMessage(src) {
+	if (!document.getElementById("mesage")) {
+	const div = document.createElement('div');
+	div.id = "mesage";
+	div.className = "event";
+
+	div.innerHTML = `<p>Адрес картинки: ${src}</p>`;
+
+		document.getElementById("image").insertAdjacentElement("afterend", div);
+	}
+}
+		
+		
