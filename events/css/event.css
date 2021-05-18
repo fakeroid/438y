@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@300;400;500;700&family=Pattaya&display=swap');
+
 html, body, div, header, section, main, articl, ul {
 	padding: 0;
 	margin: 0;
@@ -7,11 +9,12 @@ body {
 	bacground-color: rgba(210, 210, 210, 1) !important;
 	font-size: 14px !important;
 	font-weight: 400;
-	font-family: "Zapf Dingbats","Arial", sans-serif;
-	color: rgba: rgba(40, 40, 40, 1);
+	font-family: "Noto Serif","Arial", sans-serif;
+	color: rgba(40, 40, 40, 1);
 }
 
 h1, h2, h3 {
+	font-family: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
 	color: rgba(240, 240, 240, 1.0) !important;
 }
 
@@ -60,7 +63,7 @@ h1, h2, h3 {
 	padding: 0 !important;
 	margin: 0 !important;
 	padding-top: 5px !important;
-	margin-right: 35px !important;
+	margin-right: 28px !important;
 	margin-left: 10px !important;
 	font-size: 1.1rem !important;
 	color: rgba(0, 0, 190, 1.0) !important;
@@ -77,6 +80,21 @@ h1, h2, h3 {
 	background-color: rgba( 240, 240, 240, 1.0);
 	width: 100%;
 	padding: 100px 0 20px 0;
+}
+
+.active {
+	/* display: inline-block; */
+	background-color: rgb(52, 158, 64);
+	padding: 0 5px 8px 10px !important;
+}
+
+.active > a {
+	color-adjust: rgba(247, 241, 241) !important;
+}
+
+.active:hover {
+	background-color: rgb(70, 163, 82) !important;
+	cursor: pointer;
 }
 
 .contact > a > span {

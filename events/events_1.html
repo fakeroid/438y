@@ -8,15 +8,15 @@
 	<link rel="stylesheet" href="css/event.css">
 </head>
 <body>
-	<header class="fixed-top header">
+	<header id="home" class="fixed-top header">
 	<div class="container">
 		<div class="row main-header">
 			 <div id = "headerLogo" class ="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 header-logo">
       			<span class="logo"> <!--img src="img/logo.png" alt="логотип"--> Event even eve....</span>
     		</div>
     			<ul class="nav col-xl-5 col-lg-5 col-md-6 col-sm-12 col-xs-12 main-bar">
-				  <li class="nav-item">
-				    <a class="nav-link active" aria-current="page" href="../js.html">Дом</a>
+				  <li class="nav-item active">
+				    <a class="nav-link"  href="../index.html">Дом</a>
 				  </li>
 				  <li class="nav-item dropdown">
           			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Каталог</a>
@@ -25,17 +25,18 @@
             				<li><a class="dropdown-item" href="#">Мужская одежда</a></li>
             				<li><a class="dropdown-item" href="#">Детская одежда</a></li>
             				<li><a class="dropdown-item" href="#">Аксесуары</a></li>
+										<li><a class="dropdown-item" href="#">Сток</a></li>
           				</ul>
         			</li>
 				  <li class="nav-item">
-				    <a class="nav-link" href="#">Новая коллекция</a>
+				    <a class="nav-link" href="#galery">Коллекция</a>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link" href="#">Сток</a>
+				    <a class="nav-link" href="#nuws">Новости</a>
 				  </li>
 				</ul>
     		 <form id = "headerForm" class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 d-flex main-form">
-        		<input class="form-control me-2 main-control" type="search" placeholder="Search" aria-label="Search">
+        		<input class="form-control me-2 main-control" type="search" placeholder="Search" aria-label="Поиск по странице">
        			<button class="btn btn-outline-success main-control" type="submit">Search</button>
       		</form>
 		</div>
@@ -46,7 +47,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-4 contact">
-					<a href="#"><span><img src="img/home.png" alt="телефон"></span>+7 (495) 234 00 00</a>
+					<a href="../index.html"><span><img src="img/home.png" alt="телефон"></span>+7 (495) 234 00 00</a>
 					<p>Бесплатный звонок по РФ</p>
 				</div>
 				<div class="col-4 registration">
@@ -72,7 +73,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="galeri galeri-one">
+	<section id="galery" class="galeri galeri-one">
 		<div class="container">
 			<div class="row">
 				<h2>Clothing for all times</h2>
@@ -106,7 +107,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="news">
+	<section id="news" class="news">
 		<div class="container">
 		<div class="row">
 			<div class="col-xl-3 col-lg-3 col-sm-6 newes-cart">

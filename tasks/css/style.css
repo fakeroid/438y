@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+
 html,
 body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Oswald', sans-serif;
   color: rgb(61, 48, 48);
   text-align: center;
   background-image: url('../img/laptop_3.jpg');
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   width: 100%;
 }
 
@@ -19,13 +21,14 @@ body {
 } */
 
 h1 {
+  font-family: 'Oswald', 'Verdana','Geneva', 'Tahoma', sans-serif;
   margin-left: 30px;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: rgb(45, 29, 90);
 }
 
 h2 {
-	font-size: 1.6rem;
+	font-size: 1.9rem;
 	color: rgb(45, 29, 90);
 	padding: 6px 12px;
 	 background: -webkit-linear-gradient(left, rgb(218,179,225)10%,
@@ -56,7 +59,7 @@ a:hover {
 /*		КОНЕЦ ОБЩИХ СТИЛЕЙ		*/
 
 .container {
-  width: 1200px;
+  width: 1260px;
   margin: 0 auto;
 }
 
@@ -122,7 +125,7 @@ a:hover {
   border-radius: 30%;
   letter-spacing: 0.02em;
   margin-left: 12px;
-  box-shadow: 3px 3px 6px rgba(18, 27, 107, 0.8);
+  box-shadow: 2px 2px 4px rgba(18, 27, 107, 0.8);
 }
 
 .button_home {
@@ -133,7 +136,7 @@ a:hover {
   border-radius: 30%;
   letter-spacing: 0.02em;
   margin-left: 45px;
-  box-shadow: 3px 3px 6px rgba(21, 40, 100, 0.8);
+  box-shadow: 2px 2px 4px rgba(21, 40, 100, 0.8);
 }
 
 
@@ -165,17 +168,131 @@ a:hover {
 
 /*		КОНЕЦ ШАПКИ		*/
 
-.section_link {
+.title_page {
+  padding: 0 0 90px 0;
+}
+
+.title_content {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+height: 500px;
+}
+
+h1 {
+  font-size: 3.2rem;
+  color: rgba(240, 255, 255, 1.0);
+}
+
+.title_content > a {
+  font-size: 2.8rem;
+}
+
+.galeri {
+  margin-top: 80px;
+  padding: 80px 0;
+}
+
+.galeri_row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
+.galeri_cart_one,
+.galeri_cart_two {
+  display: flex;
+  min-width: 50%;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.galeri_cart_one {
+  align-items: center;
+  margin-right: 10px;
+}
+
+.galeri_cart_two {
+  align-items: center;
+}
+
+.galeri_col {
+  width: 195px;
+  padding: 5px;
+}
+/* 
+.galeri h3 {
+
+} */
+
+.galeri h3:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.textGaleri {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 400;
+  cursor: pointer;
+  color: #fff;
+}
+
+.colOne {
+  box-sizing: border-box;
+  background-color: rgb(201, 210, 215);
+  height: 250px;
+}
+
+.colTwo {
+  background-color: rgb(166, 161, 157);
+  height: 275px;
+}
+
+.colThree {
+  background-color: rgb(141, 131, 123);
+  height: 300px;
+}
+
+.colFour {
+  background-color: rgb(124, 113, 104);
+  height: 325px;
+}
+
+.colFive {
+  background-color: rgb(102, 90, 81);
+  height: 350px;
+}
+
+.colEnd {
+  background-color: rgb(90, 78, 68);
+  height: 375px;
+}
+
+.section_link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgb(166, 161, 157);
+}
+
 .section_link > .container {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	flex-direction: column;
+
+  padding: 30px 0 70px 0;
+  
+}
+
+.section_link_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .tasks {
@@ -187,13 +304,35 @@ a:hover {
   
   margin-top:30px;
   background: -webkit-linear-gradient(left, rgba(22, 96, 170, 0.8) 10%, rgba(122, 188, 255, 0.5) 10%, rgba(126, 234, 112, 0.5) 8%, rgba(47, 226, 65, 0.5) 16%, rgba(237, 242, 247, 0.5) 67%, rgba(36, 122, 207, 0.8) 65%);
+}
 
+.tasks > h3 {
+  font-size: 1.6rem;
+  font-style: italic;
+  width: 250px;
+  letter-spacing: 0.3em;
+  margin-left: 20px;
+  background:-webkit-linear-gradient(left, rgb(218,179,225)10%,
+  rgb(196,214,163)30%,
+  rgb(143,198,237)10%,
+  rgb(234,179,164)70%,
+  rgb(144,219,210)65%);
 }
 
 .left {
-	 margin-top:120px;
+  height: 600px;
+}
+
+.right {
+  justify-content: right !important;
+	 margin-top: 180px;
   background: -webkit-linear-gradient(left, rgba(36, 122, 207, 0.8) 28%, rgba(122, 188, 205, 0.5) 29%, rgba(143,198,237,0.6)10%, rgba(126, 234, 112, 0.5)68%, rgba(47, 226, 65, 0.5) 86%, rgba(237, 242, 247, 0.5) 87%, rgba(126, 234, 112, 0.5) 8%, rgba(147, 226, 65, 0.5) 46%, rgba(36, 122, 207, 0.8) 18%);
 
+}
+
+.right > .titles_link {
+  box-sizing: border-box;
+  padding-left: 120px;
 }
 
 .tasks .titles_link {
@@ -213,7 +352,7 @@ a:hover {
 	border-top: 15px double rgba(9, 44, 80, 0.8);
 	background-color: rgba(256, 256, 256, 0.5);
 	
-	margin-top: 75px;
+	margin-top: 120px;
 	padding-bottom: 50px;
 }
 .calculator > h2 {
@@ -247,12 +386,27 @@ a:hover {
 }
 
 .colon > li > button {
-	padding: 8px;
+  border: none;
+	padding: 8px 14px;
 	font-size: 1.2rem;
 	margin-left: 5px;
 	margin-top: 5px;
 	color: #fff;
 	background-color: rgba(36, 122, 207, 0.8);
+  cursor: pointer;
+}
+
+.btn_calculator:hover {
+ background-color: rgb(28, 105, 182);
+ color: rgb(240, 226, 226);
+}
+
+.linkUp {
+  display: block;
+  padding: 8px 15px;
+  color: #fff;
+  background-color: rgba(36, 122, 207, 0.8);
+  margin-top: 10px;
 }
 
 /* Style для доп страниц  */
@@ -284,11 +438,19 @@ code {
   padding: 25px 10px 25px 40px;
   background-color: #ffebcd;
   border-bottom: 15px double rgba(9, 44, 80, 0.8);
-  border-left: 15px double rgba(9, 44, 80, 0.8);
+  border-left: 15px double rgba(11, 33, 54, 0.8);
   margin-left: 125px;
   margin-top: 30px;
   padding-bottom: 30px;
   box-shadow: 3px 3px 6px rgba(70, 78, 85, 0.8);
+}
+
+.samp {
+  font-size: 2rem;
+  color: #fff;
+  width: 100%;
+  padding: 20px 0;
+  background-color: aliceblue;
 }
 
 .header_tasks {
@@ -319,7 +481,7 @@ code {
   font-style: normal;
   font-size: 1.1rem;
   line-height: 120%;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .return {

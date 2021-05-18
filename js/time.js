@@ -8,7 +8,46 @@ window.onload = function(){
   },1000);
 };
 
-//      *** Анимация тукста ***
+/*          
+            section Galery (Шаги расширяющие горизонты)
+
+        Находим по id заголовки h3 и присваиваем их константам 
+*/
+const hOne = document.getElementById('galeriOne');
+const hTwo = document.getElementById('galeriTwo');
+const hThree = document.getElementById('galeriThree');
+const hFoure = document.getElementById('galeriFoure');
+const hOneFive = document.getElementById('galeriOneFive');
+const hSix = document.getElementById('galeriSix');
+
+//        Привязываем к заголовкам события
+document.getElementById('galeriOne').addEventListener("click", cartGaleriOne);
+
+//        Активируем их через функцию
+function cartGaleriOne() {
+  if(!document.getElementById('divOne') && !document.getElementById('textOne')) {
+    const divOne = document.createElement('div');
+    const textOne =document.createElement('h3');
+    divOne.id = 'divOne';
+    divOne.className = 'textGaleri';
+    textOne.id = 'textOne';
+    textOne.className = 'titleGaleri';
+    textOne.textContent = "Первый шаг на пути к знаниям HTML / CSS";
+    setTimeout(() => {
+      document.getElementById('galeriOne').insertAdjacentElement("afterend", divOne);
+      document.getElementById('galeriOne').insertAdjacentElement("afterend", textOne);
+      document.getElementById('galeriOne').textContent = "Не пусто!";
+    }, 500);
+  } else {
+    setTimeout(() => {
+      document.getElementById('divOne').remove();
+      document.getElementById('textOne').remove();
+      document.getElementById('galeriOne').textContent = "Показать первый шаг?";
+    }, 500);
+  }
+}
+
+//      *** Анимация тeкста ***
 
 // var TxtRotate = function(el, toRotate, period) {
 //   this.toRotate = toRotate;

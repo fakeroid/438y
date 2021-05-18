@@ -7,31 +7,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Задача № 41-43</title>
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
   <header class="header_tasks">
     <div class="container">
       <h1>Задачи</h1>
+      <a class="return" href="../index.html">Вернуться</a>
   <h2>Задача № 41-43</h2>
   <p><strong>Задача №41</strong>  Дан массив с элементами 'Привет, ', 'мир' и '!'. Необходимо записать в переменную text фразу 'Привет, мир!', а затем вывести на экран содержимое этой переменной. </p>
-      <button id="btnOne" class="btn_tasks">Решение задачи</button>
-  <p><strong>Задача №42</strong>  В переменной min лежит число от 0 до 59. Определите в какую четверть часа попадает это число (в первую, вторую, третью или четвертую). </p>
-      <button id="btnTwo" class="btn_tasks">Решение задачи</button>
-  <p><strong>Задача №43</strong>  Дан массив с элементами [1, 2, 3, 4, 5]. С помощью цикла for выведите все эти элементы на экран. </p>
-      <button id="btnThree" class="btn_tasks">Решение задачи</button>
-  <code class="code">
+
+<code  class="code" class="samp">
     <samp>
 
     </samp>
       <samp> 
+        //			tasks # 41<br>
+
+const btnOne = document.getElementById('btnOne');<br>
+const sampOne = document.getElementById('sampOne');<br>
+document.getElementById('btnOne').addEventListener("click", btnFortyOne);<br>
+<br>
+function btnFortyOne() {<br>
+	let str = "";<br>
+<br>
+	let myArray = ["Привет Мир", " ! ", "Я проснулся, ", "Но лучше бы... спал."];<br>
+	<br>
+	for (let i = 0; i < myArray.length; i++) {<br>
+<br>
+		str += myArray[i];<br>
+		console.log(str);<br>
+	}<br>
+<br>
+	sampOne.insertAdjacentHTML("afterend", `${str}`);<br>
+	alert(str);<br>
+}<br>
 
       </samp>
-      <samp>
+      <samp  id="sampOne" class="samp">
 
       </samp>
+      <button id="btnOne" class="btn_tasks">Решение задачи</button>
   </code>
-  <a class="return" href="../js.html">Вернуться</a>
+
+     
+  <p><strong>Задача №42</strong>  В переменной min лежит число от 0 до 59. Определите в какую четверть часа попадает это число (в первую, вторую, третью или четвертую). </p>
+
+<code class="code">
+    <samp>
+
+    </samp>
+      <samp> 
+        //				Tasks # 42 <br>
+<br>
+        const btnTwo = document.getElementById('btnTwo');<br>
+const sampTwo = document.getElementById('sampTwo');<br>
+document.getElementById('btnTwo').addEventListener("click", btnFortyTwo);<br>
+<br>
+function btnFortyTwo() {<br>
+	let myArray = [];<br>
+	let min = 0;<br>
+	for ( let i = 0; i < 1; i++) {<br>
+		myArray.push(Math.floor(Math.random() * 60) + 1);<br>
+		min = myArray[i];<br>
+		console.log(typeof min);<br>
+	}<br>
+		if (min > 0 && min <= 15) {<br>
+			alert(`Заданное число min =  ${min} находится в первой четверти часа`);<br>
+			sampTwo.insertAdjacentHTML("afterend", `Заданное число min =   ${min} находится в первой четверти часа`);<br>
+		} else if (min > 15 && min <= 30) {<br>
+			alert(`Заданное число min =  ${min} находится во второй четверти часа`);<br>
+			sampTwo.insertAdjacentHTML("afterend", `Заданное число min =   ${min}  находится во второй четверти часа`);<br>
+		} else if (min > 30 && min <= 45) {<br>
+			alert(`Заданное число min =  ${min} находится в третьей четверти часа`);<br>
+			sampTwo.insertAdjacentHTML("afterend", `Заданное число min =   ${min}  находится в третьей четверти часа`);<br>
+		} else {<br>
+			alert(`Заданное число min =  ${min} находится в четвёртой четверти часа`);<br>
+			sampTwo.insertAdjacentHTML("afterend", `Заданное число min =   ${min}  находится в четвёртой четверти часа`);<br>
+		}<br>
+}<br>
+      </samp>
+      <samp  id="sampTwo" class="samp">
+
+      </samp>
+      <button id="btnTwo" class="btn_tasks">Решение задачи</button>
+  </code>
+
+      
+  <p><strong>Задача №43</strong>  Дан массив с элементами [1, 2, 3, 4, 5]. С помощью цикла for выведите все эти элементы на экран. </p>
+
+<code  class="code">
+    <samp>
+
+    </samp>
+      <samp> 
+        /				Tasks # 43 <br>
+<br>
+        const btnThree = document.getElementById('btnThree');<br>
+        const sampThree = document.getElementById('sampThree');<br>
+        document.getElementById('btnThree').addEventListener("click", btnFortyThree);<br>
+        <br>
+        function btnFortyThree() {<br>
+          let myArray = [];<br>
+          let min = 0;<br>
+          for ( let i = 0; i < 5; i++) {<br>
+            myArray.push(Math.floor(Math.random() * 20) + 1);<br>
+            min = myArray[i];<br>
+            console.log(typeof min);<br>
+            <br>
+          }<br>
+          sampThree.insertAdjacentHTML("afterend", `${myArray}`);<br>
+          alert(myArray);<br>
+        }<br>
+<br>        <br>
+      </samp>
+      <samp id="sampThree" class="samp">
+
+      </samp>
+      <button id="btnThree" class="btn_tasks">Решение задачи</button>
+  </code>
+
 </div>
 </header>
   <script src="js/tasks_41.js"></script>

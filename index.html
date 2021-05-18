@@ -1,76 +1,161 @@
- <!DOCTYPE html>
- <html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
 
- <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Bootstrap</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>знакомство с js</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+  <link rel="stylesheet" href="tasks/css/style.css">
+</head>
 
-     <!-- Подключение Bootstrap-стилей -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<body>
+  <header id="home" class="header">
+    <div class="container">
+      <div id="clock" class="clock"></div>
+      <div class="name-center">
+        <strong>РАБОЧАЯ ТЕТРАДЬ ДЛЯ ГБОУ ГОРОДА МОСКВЫ ДОПОЛНИТЕЛЬНОГО ПРОФЕССИОНАЛЬНОГО
+          ОБРАЗОВАНИЯ ЦЕНТРА ПРОФЕССИОНАЛЬНЫХ КВАЛИФИКАЦИЙ И СОДЕЙСТВИЯ ТРУДОУСТРОЙСТВУ «ПРОФЕССИОНАЛ» </strong>
+      </div>
+      <div class="auther">
+        <strong> Богоявленский Ярослав: </strong>
 
-     <!-- Подключение собственных стилей -->
-     <link rel="stylesheet" href="css/style.css">
- </head>
+        <!-- <h1>-Yaroclav Bogoyavlenskiy-
+          <span class="txt-rotate" data-period="2000"
+            data-rotate='[ "BogoYavleNskiy", "Ye.skiy...", "BogoyavleNskiy", "...leNs...", "...yavleNskiy" ]'></span>
+        </h1> -->
+        <ul class="main_menu">
+          <li><a class="button_home" href="#sectionLink">Контрольные задачи</a></li>
+          <li><a class="button" href="array/array.html">Массивы</a></li>
+          <li><a class="button" href="array/array.html">Циклы</a></li>
+          <li><a class="button" href="element/button.html">Элементы</a></li>
+          <li><a class="button" href="function/function.html">Функции</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section class="title_page">
+    <div class="container">
+      <div class="title_content">
+        <h1 id="title" class="title">Моя профессия - фронтенд разработчик</h1>
+        <a class="project" href="events/events_1.html">Мой проект</a>
+      </div>
+    </div>
+  </section>
+  <section class="galeri">
+    <h2>Шаги расширяющие гризонты</h2>
+    <div class="container">
+      <div class="galeri_row">
+        <div class="galeri_cart_one">
+          <div class="galeri_col colOne">
+            <h3 id="galeriOne">Показать первый шаг?</h3>
+          </div>
+          <div class="galeri_col colTwo">
+            <h3 id="galeriTwo">Пока пусто</h3>
+          </div>
+          <div class="galeri_col colThree">
+            <h3 id="galeriThree">Пока пусто</h3>
+          </div>
+        </div>
+        <div class="galeri_cart_two">
+          <div class="galeri_col colFour">
+            <h3 id="galeriFour">Пока пусто</h3>
+          </div>
+          <div class="galeri_col colFive">
+            <h3 id="galeriFive">Пока пусто</h3>
+          </div>
+          <div class="galeri_col colEnd">
+            <h3 id="galeriSix">Пока пусто</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="sectionLink" class="section_link">
+    <div class="container">
+      <h2>Задачи с которыми вроде бы легко справиться</h2>
+        <div class="section_link_row">
+      <div class="tasks left">
+        <h3>Задачи</h3>
+        <ul class="titles_link">
+          <li><a href="tasks/tasks_1.html">Задача № 1</a></li>
+          <li><a href="tasks/tasks_2.html">Задача № 2</a></li>
+          <li><a href="tasks/tasks_3.html">Задача № 3</a></li>
+          <li><a href="tasks/tasks_4.html">Задача № 4</a></li>
+          <li><a href="tasks/tasks_5.html">Задача № 5</a></li>
+          <li><a href="tasks/tasks_6.html">Задача № 6</a></li>
+          <li><a href="tasks/tasks_7.html">Задача № 7</a></li>
+          <li><a href="tasks/tasks_8.html">Задача № 8</a></li>
+          <li><a href="tasks/tasks_9.html">Задача № 9</a></li>
+          <li><a href="tasks/tasks_10.html">Задача № 10</a></li>
+          <li><a href="tasks/tasks_11.html">Задача № 11</a></li>
+          <li><a href="tasks/tasks_12.html">Задача № 12</a></li>
+          <li><a href="tasks/tasks_13.html">Задача № 13</a></li>
+          <li><a href="tasks/tasks_14.html">Задача № 14-16</a></li>
+          <li><a href="tasks/tasks_17.html">Задача № 17-19</a></li>
+          <li><a href="tasks/tasks_20.html">Задача № 20-22</a></li>
+          <li><a href="tasks/tasks_23.html">Задача № 23-25</a></li>
+          <li><a href="tasks/tasks_26.html">Задача № 26-28</a></li>
+          <li><a id="linkUp" class="linkUp" href="#home">Домой</a></li>
+        </ul>
+      </div>
+      
+      <div class="calculator">
+        <h2>Калькулятор</h2>
+        <div id="display" class="display"></div>
+        <div id="management" class="management">
 
- <body>
-     <!--    H E D E R  Начало  -->
-     <header>
-         <div class="container">
+          <ul class="colon">
+            <li><button id="one" class="btn_calculator"> 1 </button></li>
+            <li><button id="two" class="btn_calculator"> 2 </button></li>
+            <li><button id="three" class="btn_calculator"> 3 </button></li>
+            <li><button id="four" class="btn_calculator"> 4 </button></li>
+            <li><button id="five" class="btn_calculator"> 5 </button></li>
+            <li><button id="plus" class="btn_calculator"> + </button></li>
+            <li><button id="minus" class="btn_calculator"> - </button></li>
+          </ul>
+          <ul class="colon">
+            <li><button id="six" class="btn_calculator"> 6 </button></li>
+            <li><button id="seven" class="btn_calculator"> 7 </button></li>
+            <li><button id="eight" class="btn_calculator"> 8 </button></li>
+            <li><button id="nine" class="btn_calculator"> 9 </button></li>
+            <li><button id="zero" class="btn_calculator"> 0 </button></li>
+            <li><button id="multiplay" class="btn_calculator"> * </button></li>
+            <li><button id="share" class="btn_calculator"> / </button></li>
+          </ul>
+        </div>
 
-             <a href="#">
-                 <img src="img/logo.svg" alt="PromoVideoLab" class="logo">
-             </a>
-             <nav>
-                 <ul class="main-menu">
-                     <li class="d-none d-lg-block"><a href="#">Types of videos</a></li>
-                     <li class="d-none d-lg-block"><a href="#">Portfolio</a></li>
-                     <li class="d-none d-lg-block"><a href="#">Blog</a></li>
-                     <li><a class="btn" href="#">schedule a call</a></li>
-                     <li class="burger-menu d-lg-none"><button></button></li>
-                 </ul>
-             </nav>
+      </div>
+      <div class="tasks right">
+        <h3>Задачи</h3>
+        <ul class="titles_link">
+          <li><a href="tasks/tasks_29.html">Задача № 29-31</a></li>
+          <li><a href="tasks/tasks_32.html">Задача № 32-34</a></li>
+          <li><a href="tasks/tasks_35.html">Задачи № 35-37</a></li>
+          <li><a href="tasks/tasks_38.html">Задачи № 38-40</a></li>
+          <li><a href="tasks/tasks_41.html">Задачи № 41-43</a></li>
+          <li><a href="tasks/tasks_44.html">Задачи № 44-46</a></li>
+          <li><a href="tasks/tasks_47.html">Задачи № 47-49</a></li>
+          <li><a href="tasks/tasks_50.html">Задачи № 50-52</a></li>
+          <li><a href="tasks/tasks_53.html">Задачи № 53-55</a></li>
+          <li><a href="tasks/tasks_56.html">Задачи № 56-58</a></li>
+          <li><a href="tasks/tasks_59.html">Задачи № 59-61</a></li>
+          <li><a href="tasks/tasks_62.html">Задачи № 62-64</a></li>
+          <li><a href="tasks/tasks_65.html">Задачи № 65-67</a></li>
+          <li><a href="tasks/tasks_68.html">Задачи № 68-70</a></li>
+          <li><a href="tasks/tasks_71.html">Задачи № 71-73</a></li>
+          <li><a href="tasks/tasks_74.html">Задачи № 74-76</a></li>
+          <li><a href="tasks/tasks_77.html">Задачи № 77-80</a></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </section>
+  <footer class="form"></footer>
+  <!-- <script src="js/style.js"></script> -->
+  <script src="js/time.js"></script>
+</body>
 
-         </div>
-     </header>
-
-     <!-- PROMO  НАЧАЛО -->
-
-     <section class="promo">
-
-         <div class="container">
-
-             <article class="row promo-content">
-
-                 <div class="promo-titles">
-                     <h1 class="titles">Animated explainer <strong>video production</strong> for businesses around the
-                         world!</h1>
-                 </div>
-
-                 <p>
-                     Stand out from competitors, elevate your brand and improve conversions with
-                     a 90-second corporate video!
-                 </p>
-
-                 <div class="button">
-                     <a class="btn" href="#">Request a Quote</a>
-                     <a class="btn-play" href="#"><span class="btn-circle btn-circle-play"></span> Play video</a>
-                 </div>
-             </article>
-             <img src="img/promo/promo-img.svg" alt="information banner" class="promo-img">
-         </div>
-     </section>
-     <!--   PROMO КОНЕЦ    -->
-
-     <!-- Подключение библиотеки jQuery -->
-     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
-     <!-- Подключение библиотеки popper -->
-     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-
-     <!-- Подключение скрипта Bootstrap -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
- </body>
-
- </html>
+</html>
