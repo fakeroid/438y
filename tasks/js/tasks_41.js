@@ -15,8 +15,8 @@ function btnFortyOne() {
 		console.log(str);
 	}
 
-	sampOne.insertAdjacentHTML("afterend", `${str}`);
-	alert(str);
+	sampOne.insertAdjacentHTML("beforeend", `${str}`);
+	// alert(str);
 }
 
 //				Tasks # 42 
@@ -24,7 +24,6 @@ function btnFortyOne() {
 const btnTwo = document.getElementById('btnTwo');
 const sampTwo = document.getElementById('sampTwo');
 document.getElementById('btnTwo').addEventListener("click", btnFortyTwo);
-
 function btnFortyTwo() {
 	let myArray = [];
 	let min = 0;
@@ -34,17 +33,13 @@ function btnFortyTwo() {
 		console.log(typeof min);
 	}
 		if (min > 0 && min <= 15) {
-			alert(`Заданное число min =  ${min} находится в первой четверти часа`);
-			sampTwo.insertAdjacentHTML("afterend", `Заданное число min =   ${min} находится в первой четверти часа`);
+			sampTwo.insertAdjacentHTML("beforeend", `<span>Заданное число min =   ${min} находится в первой четверти часа</span>`);
 		} else if (min > 15 && min <= 30) {
-			alert(`Заданное число min =  ${min} находится во второй четверти часа`);
-			sampTwo.insertAdjacentHTML("afterend", `Заданное число min =   ${min}  находится во второй четверти часа`);
+			sampTwo.insertAdjacentHTML("beforeend", `<span>Заданное число min =   ${min}  находится во второй четверти часа</span>`);
 		} else if (min > 30 && min <= 45) {
-			alert(`Заданное число min =  ${min} находится в третьей четверти часа`);
-			sampTwo.insertAdjacentHTML("afterend", `Заданное число min =   ${min}  находится в третьей четверти часа`);
+			sampTwo.insertAdjacentHTML("beforeend", `<span>Заданное число min =   ${min}  находится в третьей четверти часа</span>`);
 		} else {
-			alert(`Заданное число min =  ${min} находится в четвёртой четверти часа`);
-			sampTwo.insertAdjacentHTML("afterend", `Заданное число min =   ${min}  находится в четвёртой четверти часа`);
+			sampTwo.insertAdjacentHTML("beforeend", `<span>Заданное число min =   ${min}  находится в четвёртой четверти часа</span>`);
 		}
 }
 
@@ -63,6 +58,6 @@ function btnFortyThree() {
 		console.log(typeof min);
 		
 	}
-	sampThree.insertAdjacentHTML("afterend", `${myArray}`);
-	alert(myArray);
+	sampThree.insertAdjacentHTML("beforeend", `${myArray}`);
+	// alert(myArray);
 }

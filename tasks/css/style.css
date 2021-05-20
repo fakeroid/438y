@@ -413,7 +413,7 @@ h1 {
 
 .btn_tasks {
   padding: 10px 15px;
-  background-color: rgba(36, 102, 27, 0.5);
+  background-color: rgba(36, 102, 27, 1);
   color: rgb(226, 202, 202);
   font-size: 0.9rem;
   border-radius: 45px ;
@@ -445,12 +445,19 @@ code {
   box-shadow: 3px 3px 6px rgba(70, 78, 85, 0.8);
 }
 
-.samp {
-  font-size: 2rem;
-  color: #fff;
+.samp { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 20px 0;
-  background-color: aliceblue;
+  padding: 10px 10px;
+  background-color: rgb(233, 238, 243);
+  margin: 20px 0;
+}
+
+.span_two > span {
+  font-size: 2rem !important;
+  color: #fff !important;
 }
 
 .header_tasks {
@@ -461,7 +468,8 @@ code {
 }
 
 .header_tasks p {
-  color: #fff;
+  font-size: 1.1rem;
+  color: rgb(116, 84, 84);
 }
 
 .header_tasks p{
