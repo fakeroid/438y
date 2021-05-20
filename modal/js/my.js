@@ -47,20 +47,20 @@
 
 
 
-$('#btnEnterOne').on('click', (event) =>{
+$('#btnEnterOne').on('click', () =>{
 	$('.pOne').fadeIn('slow')
 	$('.btn-exit-one').fadeIn('slow')
 })
 
-$('#btnExitOne').on('click', (event) =>{
+$('#btnExitOne').on('click', () =>{
 	$('.pOne').fadeOut('slow')
-	$('.btn-exit-one').fadeIn('slow')
+	// $('.btn-exit-one').fadeIn('slow')
 })
 
-$('#btnEnterModal').on('click', (event) =>{
+$('#btnEnterModal').on('click', () =>{
 	$('#modal').fadeIn('slow')
 })
 
-$('#btnExitModal').on('click', (event) =>{
+$('#btnExitModal').on('click', () =>{
 	$('#modal').fadeOut('slow')
 })
