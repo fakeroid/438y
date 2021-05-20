@@ -50,7 +50,6 @@
 $('#btnEnterOne').on('click', (event) =>{
 	$('.pOne').fadeIn('slow')
 	$('.btn-exit-one').fadeIn('slow')
-
 })
 
 $('#btnExitOne').on('click', (event) =>{
