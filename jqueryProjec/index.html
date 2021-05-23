@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JQuery project</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!--    Начало проекта  шапка -->
+  <header class="main-header">
+    <div class="container">
+      <div class="main-bar">
+        <span>Богоявленский Я. Е.</span>
+        <nav id="mainNav" class="main-nav">
+          <ul>
+            <li><a href="#">Дом</a></li>
+            <li><a href="#main">Модальное окно</a></li>
+            <li><a href="">Контакты</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+      <div class="info">
+      <div class="header-content">
+        <h1>Домашнее задание</h1>
+        <button id="btnEnterOne" class="btn btn-enter-one">Показать задание</button>
+        <p class="pOne">Подключить локально библиотеку jQuery к собственной html-странице. Создать модальное окно на веб-странице с применением данной библиотеки. Данная библиотека должна обеспечивать плавное открытие/закрытие модального окна.</p>
+        <p class="pOne">По результату выполнения задания должен быть создан корневой каталог, содержащий веб-страницу в расширении .html, а также файлы скрипта JavaScript и файлы библиотеки jQuery. Допускается наличие дополнительных файлов расширений: .css, .jpg и других.</p>
+        <button id="btnExitOne" class="btn btn-exit-one">Скрыть задание</button>
+      </div>
+      <div class="header-image">
+        <img src="img/image.jpg" alt="фотография">
+      </div>
+    </div>
+    </div>
+  </header>
+
+<!--     секция модального окна    -->
+
+  <main id="main" class="main-modal">
+    <div class="container">
+      <h2>Моё модальное окно</h2>
+      
+      <div id="modal" class="modal">
+        <div class="box-modal">
+          <span class="name-modal">Первый опыт</span>
+            <div class="content">
+              <div class="image text one">
+
+                <h3>Рабочее место</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse asperiores aut adipisci consectetur veniam dignissimos nostrum eligendi delectus ut laboriosam blanditiis maxime, voluptatem temporibus. </p>
+                <img src="img/modalOne62689.jpg" alt="">
+
+              </div>
+
+              <div class="image text two">
+              
+                <img src="img/modalTwo.jpg" alt="">
+               <h3>Отдых то же важен</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae sed quasi quae eligendi earum laudantium eaque quaerat voluptatibus odit atque </p>
+        
+            </div>
+          </div>
+
+            <button id="btnExitModal" class="btn btnExit">Скрыть окно</button>
+      </div>
+      </div>
+         <button id="btnEnterModal" class="btn">Открыть окно</button>
+    </div>
+  </main>
+
+  <!--     конец проекта модальное окно  -->
+
+  <footer id="footer" class="main-footer">
+    <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    </div>
+</footer>
+
+
+
+  <script src="Jquery/JQuery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="js/my.js"></script>
+</body>
+</html>
