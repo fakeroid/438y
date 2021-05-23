@@ -28,33 +28,38 @@ const buttonReset = document.querySelector('#buttonReset');
 
 document.getElementById('buttonRegist').addEventListener('click', registrationSite);
 
-let ac = {								//	Создаём обЪект хронящий данные о пользователе
-	name: "Администратор",
-	password: 12345,
-	email: "Mariy@mail.ru",
-}
 
 function registrationSite(event) {
 	event.preventDefault();
 	//----------------	Проверяем коректность вводимых данных и удоляем ссылку регистрации -------------------------
+		let log = inputLogin.value;
+		let pas = inputPassword.value;
+		let ema = inputMail.value;
 
-		ac.name = inputLogin.value;
-		ac.password = inputPassword.value;
-		ac.email = inputMail.value;
+		if (log == "" || pas == "" || ema == "") {
+	
+			alert("Не корректный ввод данных");
+		}	else if(isNaN(+pas)) {
+			alert("Пароль не число");
+		}	else {
+			let ac = {								//	Создаём обЪект хронящий данные о пользователе
+				name: "Администратор",
+				password: 12345,
+				email: "Mariy@mail.ru",	
+			}
+
+			ac.name = log;
+			ac.password = Number(pas);
+			ac.email = ema;
+			document.querySelector('#registrHom').style.display = "none";
 
 		console.log(ac.name);
 		console.log(ac.password);
 		console.log(ac.email);
+		console.log(ac);
+		
 
-		if (ac.name == "" || ac.password == "" || ac.email == "") {
-			alert("Не корректный ввод данных");
-		}	else if(isNaN(+ac.password)) {
-			alert("Пароль не число");
-		}	else {
-			document.querySelector('#registrHom').style.display = "none";
-		}
-
-	
+		
 
 // const registrHome = document.getElementById('registrHom');
 
@@ -146,7 +151,7 @@ document.getElementById('enterHom').addEventListener('click', loginHom);
 
 function loginHom(event) {
 	event.preventDefault();
-	if()
+
 	if (!document.getElementById('divForm') && !document.getElementById('enterForm') && !document.getElementById('labelLogin') && !document.getElementById('inputLogin') && !document.getElementById('labelPassword') && !document.getElementById('inputPassword') && !document.getElementById('btnEnter') && !document.getElementById('btnTwo') && !document.getElementById('btnExit')) {
 
 		const div = document.createElement('div');
@@ -265,7 +270,7 @@ function loginHom(event) {
 				alert(`Вы вошли в аккаунт под именем ${str}`);
 			}
 		}
-					console.log(ac);
+	
 
 
 		//----------------------------------------Выход из меню вход ------------------------------
@@ -275,10 +280,8 @@ function loginHom(event) {
 		// 	document.getElementById('enterForm').remove();
 		// }, 500);
 
-	} else {
-
-
-		}
+				} 
+	
 	}
-
+}
 }
