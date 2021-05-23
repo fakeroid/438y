@@ -20,7 +20,7 @@
 				  </li>
 				  <li class="nav-item dropdown">
           			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Каталог</a>
-          			<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          			<ul class="dropdown-menu main-dropdown" aria-labelledby="navbarDropdownMenuLink">
             				<li><a class="dropdown-item" href="#">Женская одежда</a></li>
             				<li><a class="dropdown-item" href="#">Мужская одежда</a></li>
             				<li><a class="dropdown-item" href="#">Детская одежда</a></li>
@@ -32,7 +32,7 @@
 				    <a class="nav-link" href="#galery">Коллекция</a>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link" href="#nuws">Новости</a>
+				    <a class="nav-link" href="#news">Новости</a>
 				  </li>
 				</ul>
     		 <form id = "headerForm" class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 d-flex main-form">
@@ -42,7 +42,7 @@
 		</div>
 	</div>
 </header>
-<main>
+<main id="main">
 	<section class="main-nav">
 		<div class="container">
 			<div class="row">
@@ -51,8 +51,8 @@
 					<p>Бесплатный звонок по РФ</p>
 				</div>
 				<div class="col-4 registration">
-					<a class="registr" href="#"><span><img src="img/regis.png" alt="регистрация"></span> Войти</a>
-					<a class="registr" href="#">Регистрация</a>
+					<a id="enterHom" class="registr" href="#"><span><img src="img/regis.png" alt="регистрация"></span> Войти</a>
+					<span id="enter" class="span-enter"><a id="registrHom" class="registr" href="#registrationPortal">Регистрация</a><span class="titleLogin"></span></span>
 				</div>
 				<div class="col-4 basket">
 				<a href=""><span><img src="img/backet.png" alt="корзина"></span>Корзина</a>
@@ -145,10 +145,47 @@
 		</div>
 		</div>
 	</section>
+
 	<section>
 		<div class="container"></div>
 	</section>
 </main>
+<footer class="main-footer">
+	<div class="container">
+		<div class="row">
+			<div  class="col-xl-4 col-lg-4 col-md-12" >
+				
+			</div>
+			<div  class="col-xl-4 col-lg-4 col-md-12" >
+				
+			</div>
+			<div id="registrationPortal" class="col-xl-4 col-lg-4 col-md-12" >
+				<div class="div-form">
+					<h3>Регистрация на ...... </h3>
+					<form id="registrationForm" action="" class="form-registration">
+
+						<label class="label-login">Введите логин
+						<input id="loginRegInput" type="text" placeholder="имя" class="input-login" min="3" max="20">
+					</label>
+						 <label class="label-mail">Введите Email
+						<input id="mailRegInput" type="email" name="mail" placeholder="Email" class="input-mail">
+					</label>
+						<label class="label-password">Введите пароль
+						<input id="passwordRegInput" type="password" name="password" placeholder="число" class="input-password" min="5" max="20">
+					</label>
+						<div class="btn-box">
+							<button id="buttonRegist" class="btn-registration">Отправить</button>
+							<button type="reset" id="buttonReset" class="btn-registration">Сбросить</button>
+							<a href="#main" class="link-return">Вернуться</a>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="js/event_1.js"></script>	
 </body>

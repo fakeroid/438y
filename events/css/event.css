@@ -45,7 +45,7 @@ h1, h2, h3 {
 }
 
 .main-bar {
-	paddig: 0 !important;
+	padding: 0 !important;
 	background-color: rgba(190, 190, 190, 0.1) !important;
 }
 
@@ -74,6 +74,10 @@ h1, h2, h3 {
 	padding: 0 5px !important;
 	margin-top: 5px !important;
 	font-size: 0.8rem !important;
+}
+
+.main-dropdown {
+	background-color: rgba(190, 190, 190, 0.9);
 }
 
 .main-nav {
@@ -117,6 +121,89 @@ h1, h2, h3 {
 	margin-right: 15px;
 }
 
+/*	Форма на js   */
+
+
+.divForm {
+	position: fixed;
+	display: block;
+
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	width: 100%;
+	height: 100%;
+
+	padding-top: 100px;
+	text-align: center;
+	background-color: rgba(100, 100, 100, 0.6);
+}
+
+.formOne {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 23%;
+	z-index: 2;
+	width: 480px;
+	height: 350px;
+
+	padding: 20px;
+	background-color: rgba(190, 190, 190, 1);
+}
+
+.labelOne {
+	margin: 10px;	
+	font-size: 1rem;
+	z-index: 3;
+}
+
+
+.inputTwo,
+.inputOne {
+	margin-bottom: 20px;
+	padding: 10px;  
+	width: 320px;
+	height: 30px;
+	z-index: 4;
+}
+
+
+.labelTwo {
+	margin: 10px;
+	font-size: 1rem;
+	z-index: 5;
+}
+
+
+.btnThree,
+.btnOne,
+.btnTwo {
+	display: inline;
+	z-index: 6;
+	width: 110px;
+	height: 32px;
+	margin: 5px 20px;
+
+	color: #fffbff;
+	background-color: #0E6EFD;
+}
+
+.btnOne {
+	
+}
+
+.btnTwo {
+
+
+}
+
+.btnThree {	
+
+}
+/*	Конец формы   */
+
 
 .home {
 	background-image: url('../img/bg.png');
@@ -152,8 +239,8 @@ h1, h2, h3 {
 
 .link {
 	display: inline-block;
-	background-color: #0E6EFD;
-	color: #fffbff;
+	background-color: rgb(14, 110, 253);
+	color: rgb(255, 251, 255);
 	text-decoration: none;
 	width: 200px;
 	padding: 8px 15px;
@@ -161,14 +248,14 @@ h1, h2, h3 {
 }
 
 .galeri-one {
-	background-color: #B81F16;
+	background-color: rgb(184, 31, 22);
 	padding-top: 30px;
 	padding-bottom: 35px;
 	text-align: center;
 }
 
 .galeri-two {
-		background-color: #D4A017;
+		background-color: rgb(212, 160, 23);
 	padding-top: 30px;
 	padding-bottom: 35px;
 	text-align: center;
@@ -187,12 +274,25 @@ h1, h2, h3 {
 		width: 97%;
 }
 
+/*	Секция новостей*/
+
 .news {
 	background-image: url('../img/bg_2.png');
 	background-repeat: repeat-x;
-	padding-top: 30px;
-	padding-bottom: 35px;
+	padding-top: 35px;
+	padding-bottom: 40px;
 	text-align: center;
+}
+
+.news-cont {
+	background-color: rgb(14, 110, 253);
+	width: 100%;
+	height: 420px;
+}
+
+.news-cont > p {
+	color: rgba(240, 240, 240, 1.0);
+	margin-top: 20px;
 }
 
 .news-cont img {
@@ -208,7 +308,71 @@ h1, h2, h3 {
 }
 
 
+/*   Начало footer  */
 
+.main-footer {
+	background-color: rgba(14, 110, 253, 1.0);
+	padding: 30px 0;
+}
+
+/*	Форма регистрации	*/
+
+.div-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 300px;
+
+	text-align: center;
+
+	padding: 10px;
+	background-color: rgba(190, 190, 190, 1.0);
+}
+
+.form-registration {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+
+	text-align: left;
+}
+
+.label-login,
+.label-mail,
+.label-password {
+	width: 290px;
+	height: 35px;
+
+	margin-bottom: 22px;
+}
+
+.span-enter {
+	color: #000;
+}
+
+.btn-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.btn-registration {
+	padding: 8px 12px;
+	color: rgb(255, 251, 255);
+	background-color: rgb(14, 110, 253);
+
+	margin-right: 12px; 
+}
+
+.link-return {
+	color: rgb(255, 251, 255);
+}
 
 @media (max-width: 1200px) {
 		.logo {
@@ -279,7 +443,7 @@ h1, h2, h3 {
 	}
 	
 	.news {
-		background-image: url('../img/bg_3.png) !important;
+		background-image: url('../img/bg_3.png');
 		background-repeat: no-repeat;
 	}
 
@@ -293,7 +457,7 @@ h1, h2, h3 {
 			padding-top: 5px;
 		    font-size: 1.2rem !important;
 	}
-		.main-bar > li a 
+		.main-bar > li a {
 			padding: 0 !important;
 			margin-right: 0 !important;
 			margin-left: 20px !important;

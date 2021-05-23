@@ -91,7 +91,7 @@ document.getElementById('btnThree').addEventListener("click", btnForty);
 
 function btnForty() {
 
-	if (!document.getElementById('image') && document.getElementById('code')) {
+	if (!document.getElementById('image') && !document.getElementById('code')) {
 		const img = document.createElement('img');
 		img.id = 'image';
 		img.alt = "Foto";
