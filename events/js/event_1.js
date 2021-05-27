@@ -21,6 +21,7 @@ const formReg = document.querySelector('#registrationForm');
 const inputLogin = document.querySelector('#loginRegInput');
 const inputMail = document.querySelector('#mailRegInput');
 const inputPassword = document.querySelector('#passwordRegInput');
+const inputConfirm = document.querySelector('#confirmReg');
 const buttonRegSite = document.querySelector('#buttonRegist');
 const buttonReset = document.querySelector('#buttonReset');
 
@@ -32,256 +33,377 @@ document.getElementById('buttonRegist').addEventListener('click', registrationSi
 function registrationSite(event) {
 	event.preventDefault();
 	//----------------	Проверяем коректность вводимых данных и удоляем ссылку регистрации -------------------------
-		let log = inputLogin.value;
-		let pas = inputPassword.value;
-		let ema = inputMail.value;
+	let log = inputLogin.value;
+	let pas = inputPassword.value;
+	let ema = inputMail.value;
+	let con = inputConfirm.value;
 
-		if (log == "" || pas == "" || ema == "") {
-	
-			alert("Не корректный ввод данных");
-		}	else if(isNaN(+pas)) {
-			alert("Пароль не число");
-		}	else {
-			let ac = {								//	Создаём обЪект хронящий данные о пользователе
-				name: "Администратор",
-				password: 12345,
-				email: "Mariy@mail.ru",	
-			}
+	if (log == "" || pas == "" || ema == "" || con == "") {
 
-			ac.name = log;
-			ac.password = Number(pas);
-			ac.email = ema;
-			document.querySelector('#registrHom').style.display = "none";
+		let span = document.createElement('span');
+		span.id = "mistake";
+		span.className = "mistakeSpan";
+		span.textContent = "Не корректный ввод данных";
+		document.getElementById('registrationForm').insertAdjacentElement("beforebegin", span);
+		timedInfo();
+
+		function timedInfo() {
+			setTimeout(three, 4000);
+		}
+
+		function three() {
+			span.remove();
+		}
+		// alert("Не корректный ввод данных");
+	} else if (isNaN(+pas) || isNaN(+con)) {
+
+		let span = document.createElement('span');
+		span.id = "mistake";
+		span.className = "mistakeSpan";
+		span.textContent = "Пароль не число";
+		document.getElementById('registrationForm').insertAdjacentElement("beforebegin", span);
+		timedInfo();
+
+		function timedInfo() {
+			setTimeout(three, 4000);
+		}
+
+		function three() {
+			span.remove();
+		}
+
+		// alert("Пароль не число");
+	} else if (Number(pas) !== Number(con)) {
+
+		let span = document.createElement('span');
+		span.id = "mistake";
+		span.className = "mistakeSpan";
+		span.textContent = "Введеные пароли не совпадают";
+		document.getElementById('registrationForm').insertAdjacentElement("beforebegin", span);
+		timedInfo();
+
+		function timedInfo() {
+			setTimeout(three, 4000);
+		}
+
+		function three() {
+			span.remove();
+		}
+
+		// alert(`Введеные пароли не совпадают`);
+	} else {
+		let ac = { //	Создаём обЪект хронящий данные о пользователе
+			name: "Администратор",
+			password: 12345,
+			email: "Mariy@mail.ru",
+		}
+
+		ac.name = log;
+		ac.password = Number(pas);
+		ac.email = ema;
+		document.querySelector('#registrHom').style.display = "none";
+
+		let span = document.createElement('span');
+		span.id = "mistake";
+		span.className = "mistakeSpan";
+		span.textContent = "Вы зарегестрированны, нажмите вернуться";
+		document.getElementById('registrationForm').insertAdjacentElement("beforebegin", span);
+		timedInfo();
+
+		function timedInfo() {
+			setTimeout(three, 4000);
+		}
+
+		function three() {
+			span.remove();
+		}
 
 		console.log(ac.name);
 		console.log(ac.password);
 		console.log(ac.email);
 		console.log(ac);
-		
-
-		
-
-// const registrHome = document.getElementById('registrHom');
 
 
-//------------------------ Событие регистрации 2 с созданием формы ????? ------------------------
-
-// document.getElementById('registrHom').addEventListener('click', registHom);
-// function registHom() {
-// 	 if (!document.getElementById('divForm') && !document.getElementById('registrForm') && !document.getElementById('labelLogin') && !document.getElementById('inputLogin') && document.getElementById('labelEmail') && document.getElementById('inputEmail') && !document.getElementById('btnRegistr') && !document.getElementById('btnTwo')) {
-
-// 	 	 const div = document.createElement('div');
-// 	 	 div.id = "divForm";
-// 	 	 div.className = "divForm";
-
-// 		const form = document.createElement('form');
-// 		form.id = "registrForm";
-// 		form.className = "formOne";
-// 		form.textContent = "Окно регистрации";
-
-// 		const labelLog = document.createElement('label');
-// 		labelLog.id = "labelLogin";
-// 		labelLog.className = "labelOne";
-// 		labelLog.textContent = "Введите логин:";
-
-// 		const inputLog = document.createElement('input');
-// 		inputLog.id = "inputLogin";
-// 		inputLog.className = "inputOne";	
-
-// 		const labelMail = document.createElement('label');				// 	 && !document.getElementById('labelPassword') && !document.getElementById('inputPassword')
-// 		labelMail.id = "labelEmail";
-// 		labelMail.className = "labelThree";							//	&& document.getElementById('labelEmail') && document.getElementById('inputEmail')
-// 		labelMail.textContent = "Введите @ mail:";
-
-// 		const inputMail = document.createElement('input');
-// 		inputMail.id = "inputEmail";
-// 		inputMail.className = "inputThree";					
-
-//	const labelPass = document.createElement('label');
-//	labelPass.id = "labelPassword";
-//	labelPass.className = "labelTwo";
-//	labelPass.textContent = "Введите пароль:";
-
-//	const inputPass = document.createElement('input');
-//	inputPass.id = "inputPassword";
-//	inputPass.className = "inputTwo";
-
-// const buttonReg = document.createElement('button');
-// buttonReg.id = "btnRegistr";
-// buttonReg.className = "btnOne";
-// buttonReg.textContent = "Зарегистрироватся";
-
-// const buttonReset = document.createElement('button');
-// buttonReset.id = "btnTwo"
-// buttonReset.className = "btnTwo"
-// buttonReset.textContent = "Сбросить";
-
-//----------------- Активирование события регистрация ---------------------------------------
-
-// 		setTimeout(() =>{ 
-// 			document.getElementById('registrHom').insertAdjacentElement("afterend", div);
-// 			document.getElementById('registrHom').insertAdjacentElement("afterbegin", form);
-
-// 			document.getElementById('registrHom').insertAdjacentElement("afterend", labelLog);
-// 			document.getElementById('registrHom').insertAdjacentElement("afterbegin", inputLog);
-
-// 			document.getElementById('registrHom').insertAdjacentElement("afterend", labelMail);
-// 			document.getElementById('registrHom').insertAdjacentElement("afterbegin", inputMail);
-
-// 		//	document.getElementById('registrHom').insertAdjacentElement("afterend", labelPass);
-// 		//	document.getElementById('registrHom').insertAdjacentElement("afterbegin", inputPass);
-
-// 			document.getElementById('registrHom').insertAdjacentElement("beforeend", buttonReg);
-// 			document.getElementById('registrHom').insertAdjacentElement("beforeend", buttonReset);
-// 		}, 500);
-
-// 	} else {
-
-// 	}
-
-// }
-
-const enterHome = document.getElementById('enterHom');
-// console.log(enterHome);
 
 
-//--------------------------------- Событие авторизации ---------------------------
-
-document.getElementById('enterHom').addEventListener('click', loginHom);
-
-function loginHom(event) {
-	event.preventDefault();
-
-	if (!document.getElementById('divForm') && !document.getElementById('enterForm') && !document.getElementById('labelLogin') && !document.getElementById('inputLogin') && !document.getElementById('labelPassword') && !document.getElementById('inputPassword') && !document.getElementById('btnEnter') && !document.getElementById('btnTwo') && !document.getElementById('btnExit')) {
-
-		const div = document.createElement('div');
-		div.id = "divForm";
-		div.className = "divForm";
-
-		const form = document.createElement('form');
-		// form.setAttribute("method", "post");
-		form.id = "enterForm";
-		form.className = "formOne";
-
-		const labellog = document.createElement('label');
-		labellog.id = "labelLogin";
-		labellog.className = "labelOne";
-		labellog.textContent = "Введите логин:";
-
-		const inputLog = document.createElement('input');
-		inputLog.setAttribute = ("type", "text");
-		inputLog.setAttribute = ("name", "login");
-		// inputLog.setAttribute = ("placeholder", "Логин");
-		inputLog.id = "inputLogin";
-		inputLog.className = "inputOne";
-
-		const labelPass = document.createElement('label');
-		labelPass.id = "labelPassword";
-		labelPass.className = "labelTwo";
-		labelPass.textContent = "Введите пароль:";
-
-		const inputPass = document.createElement('input');
-		inputPass.setAttribute = ("type", "password");
-		inputPass.setAttribute = ("name", "regPassword");
-		// inputPass.setAttribute = ("placeholder", "Пароль");
-		inputPass.id = "inputPassword";
-		inputPass.className = "inputTwo";
-
-		const buttonEnter = document.createElement('button');
-		buttonEnter.setAttribute = ("type", "submit");
-		buttonEnter.id = "btnEnter";
-		buttonEnter.className = "btnOne";
-		buttonEnter.textContent = "Войти";
-
-		const buttonReset = document.createElement('button');
-		buttonReset.setAttribute = ("type", "reset");
-		buttonReset.id = "btnTwo"
-		buttonReset.className = "btnTwo"
-		buttonReset.textContent = "Сбросить";
-
-		const buttonExit = document.createElement('button');
-		buttonExit.setAttribute = ("type", "submit");
-		buttonExit.id = "btnExit"
-		buttonExit.className = "btnThree"
-		buttonExit.textContent = "Выйти";
-
-		//----------------- ВВодим элеметы непосредственно в форму ---------------------------------
-
-		form.appendChild(labellog);
-		form.appendChild(inputLog);
-
-		form.appendChild(labelPass);
-		form.appendChild(inputPass);
-
-		form.appendChild(buttonEnter);
-		form.appendChild(buttonReset);
-		form.appendChild(buttonExit);
+		// const registrHome = document.getElementById('registrHom');
 
 
-		//----------------- Активирование события авиторизации ---------------------------------------
+		//------------------------ Событие регистрации 2 с созданием формы ????? ------------------------
 
-		setTimeout(() => {
-			document.getElementById('enterHom').insertAdjacentElement("afterend", div);
-			document.getElementById('enterHom').insertAdjacentElement("afterend", form);
+		// document.getElementById('registrHom').addEventListener('click', registHom);
+		// function registHom() {
+		// 	 if (!document.getElementById('divForm') && !document.getElementById('registrForm') && !document.getElementById('labelLogin') && !document.getElementById('inputLogin') && document.getElementById('labelEmail') && document.getElementById('inputEmail') && !document.getElementById('btnRegistr') && !document.getElementById('btnTwo')) {
 
-			// document.getElementById('enterHom').insertAdjacentElement("afterend", labellog);
-			// document.getElementById('enterHom').insertAdjacentElement("afterbegin", inputLog);
+		// 	 	 const div = document.createElement('div');
+		// 	 	 div.id = "divForm";
+		// 	 	 div.className = "divForm";
 
-			// document.getElementById('enterHom').insertAdjacentElement("afterend", labelPass);
-			// document.getElementById('enterHom').insertAdjacentElement("afterbegin", inputPass);
+		// 		const form = document.createElement('form');
+		// 		form.id = "registrForm";
+		// 		form.className = "formOne";
+		// 		form.textContent = "Окно регистрации";
 
-			// document.getElementById('enterHom').insertAdjacentElement("beforeend", buttonReg);
-			// document.getElementById('enterHom').insertAdjacentElement("beforeend", buttonReset);
-			// document.getElementById('enterHom').insertAdjacentElement("beforeend", buttonExit);
-		}, 500);
+		// 		const labelLog = document.createElement('label');
+		// 		labelLog.id = "labelLogin";
+		// 		labelLog.className = "labelOne";
+		// 		labelLog.textContent = "Введите логин:";
 
-		//------------------------------- выход без пароля ---------------------------------
-		buttonExit.addEventListener('click', loginExit);
-		function loginExit() {
-			setTimeout(() => {
-				div.remove();
-				form.remove();
-			}, 500);
-			
-		}
-//--------------------------------------- введение логина и пароля	---------------------
-		
-		buttonEnter.addEventListener('click', logSite);
+		// 		const inputLog = document.createElement('input');
+		// 		inputLog.id = "inputLogin";
+		// 		inputLog.className = "inputOne";	
 
-		function logSite() {
-			let str = inputLog.value;
-			let pass = inputPass.value;
-			let email = inputMail.value;
-			if (str === "" || pass === "") {
+		// 		const labelMail = document.createElement('label');				// 	 && !document.getElementById('labelPassword') && !document.getElementById('inputPassword')
+		// 		labelMail.id = "labelEmail";
+		// 		labelMail.className = "labelThree";							//	&& document.getElementById('labelEmail') && document.getElementById('inputEmail')
+		// 		labelMail.textContent = "Введите @ mail:";
 
-				alert("Допущена пустая строка");
+		// 		const inputMail = document.createElement('input');
+		// 		inputMail.id = "inputEmail";
+		// 		inputMail.className = "inputThree";					
 
-			} else if (isNaN(+pass)) { 
+		//	const labelPass = document.createElement('label');
+		//	labelPass.id = "labelPassword";
+		//	labelPass.className = "labelTwo";
+		//	labelPass.textContent = "Введите пароль:";
 
-				alert(`Пароль не число ${pass}`);
+		//	const inputPass = document.createElement('input');
+		//	inputPass.id = "inputPassword";
+		//	inputPass.className = "inputTwo";
 
-			}	else if (Number(pass) !== Number(ac.password) || str !== ac.name) {
-							alert(`Не верный логин:  ${str}  или пароль:  ${pass}`)
-			} else {
-				div.remove();
-				form.remove();
-				enterHome.textContent = "Выйти"
-				document.querySelector('.titleLogin').textContent = `Логин:  ${str}  Email:  ${email}`;
-				alert(`Вы вошли в аккаунт под именем ${str}`);
+		// const buttonReg = document.createElement('button');
+		// buttonReg.id = "btnRegistr";
+		// buttonReg.className = "btnOne";
+		// buttonReg.textContent = "Зарегистрироватся";
+
+		// const buttonReset = document.createElement('button');
+		// buttonReset.id = "btnTwo"
+		// buttonReset.className = "btnTwo"
+		// buttonReset.textContent = "Сбросить";
+
+		//----------------- Активирование события регистрация ---------------------------------------
+
+		// 		setTimeout(() =>{ 
+		// 			document.getElementById('registrHom').insertAdjacentElement("afterend", div);
+		// 			document.getElementById('registrHom').insertAdjacentElement("afterbegin", form);
+
+		// 			document.getElementById('registrHom').insertAdjacentElement("afterend", labelLog);
+		// 			document.getElementById('registrHom').insertAdjacentElement("afterbegin", inputLog);
+
+		// 			document.getElementById('registrHom').insertAdjacentElement("afterend", labelMail);
+		// 			document.getElementById('registrHom').insertAdjacentElement("afterbegin", inputMail);
+
+		// 		//	document.getElementById('registrHom').insertAdjacentElement("afterend", labelPass);
+		// 		//	document.getElementById('registrHom').insertAdjacentElement("afterbegin", inputPass);
+
+		// 			document.getElementById('registrHom').insertAdjacentElement("beforeend", buttonReg);
+		// 			document.getElementById('registrHom').insertAdjacentElement("beforeend", buttonReset);
+		// 		}, 500);
+
+		// 	} else {
+
+		// 	}
+
+		// }
+
+		const enterHome = document.getElementById('enterHom');
+		// console.log(enterHome);
+
+
+		//--------------------------------- Событие авторизации ---------------------------
+
+		document.getElementById('enterHom').addEventListener('click', loginHom);
+
+		function loginHom(event) {
+			event.preventDefault();
+
+			if (!document.getElementById('divForm') && !document.getElementById('enterForm') && !document.getElementById('labelLogin') && !document.getElementById('inputLogin') && !document.getElementById('labelPassword') && !document.getElementById('inputPassword') && !document.getElementById('btnEnter') && !document.getElementById('btnTwo') && !document.getElementById('btnExit')) {
+
+				const div = document.createElement('div');
+				div.id = "divForm";
+				div.className = "divForm";
+
+				const form = document.createElement('form');
+				// form.setAttribute("method", "post");
+				form.id = "enterForm";
+				form.className = "formOne";
+
+				const labellog = document.createElement('label');
+				labellog.id = "labelLogin";
+				labellog.className = "labelOne";
+				labellog.textContent = "Введите логин:";
+
+				const inputLog = document.createElement('input');
+				inputLog.setAttribute = ("type", "text");
+				inputLog.setAttribute = ("name", "login");
+				// inputLog.setAttribute = ("placeholder", "Логин");
+				inputLog.id = "inputLogin";
+				inputLog.className = "inputOne";
+
+				const labelPass = document.createElement('label');
+				labelPass.id = "labelPassword";
+				labelPass.className = "labelTwo";
+				labelPass.textContent = "Введите пароль:";
+
+				const inputPass = document.createElement('input');
+				inputPass.setAttribute = ("type", "password");
+				inputPass.setAttribute = ("name", "regPassword");
+				// inputPass.setAttribute = ("placeholder", "Пароль");
+				inputPass.id = "inputPassword";
+				inputPass.className = "inputTwo";
+
+				const buttonEnter = document.createElement('button');
+				buttonEnter.setAttribute = ("type", "submit");
+				buttonEnter.id = "btnEnter";
+				buttonEnter.className = "btnOne";
+				buttonEnter.textContent = "Войти";
+
+				const buttonReset = document.createElement('button');
+				buttonReset.setAttribute = ("type", "reset");
+				buttonReset.id = "btnTwo"
+				buttonReset.className = "btnTwo"
+				buttonReset.textContent = "Сбросить";
+
+				const buttonExit = document.createElement('button');
+				buttonExit.setAttribute = ("type", "submit");
+				buttonExit.id = "btnExit"
+				buttonExit.className = "btnThree"
+				buttonExit.textContent = "Выйти";
+
+				//----------------- ВВодим элеметы непосредственно в форму ---------------------------------
+
+				form.appendChild(labellog);
+				form.appendChild(inputLog);
+
+				form.appendChild(labelPass);
+				form.appendChild(inputPass);
+
+				form.appendChild(buttonEnter);
+				form.appendChild(buttonReset);
+				form.appendChild(buttonExit);
+
+
+				//----------------- Активирование события авиторизации ---------------------------------------
+
+				setTimeout(() => {
+					document.getElementById('enterHom').insertAdjacentElement("afterend", div);
+					document.getElementById('enterHom').insertAdjacentElement("afterend", form);
+
+					// document.getElementById('enterHom').insertAdjacentElement("afterend", labellog);
+					// document.getElementById('enterHom').insertAdjacentElement("afterbegin", inputLog);
+
+					// document.getElementById('enterHom').insertAdjacentElement("afterend", labelPass);
+					// document.getElementById('enterHom').insertAdjacentElement("afterbegin", inputPass);
+
+					// document.getElementById('enterHom').insertAdjacentElement("beforeend", buttonReg);
+					// document.getElementById('enterHom').insertAdjacentElement("beforeend", buttonReset);
+					// document.getElementById('enterHom').insertAdjacentElement("beforeend", buttonExit);
+				}, 500);
+
+				//------------------------------- выход без пароля ---------------------------------
+				buttonExit.addEventListener('click', loginExit);
+
+				function loginExit() {
+					setTimeout(() => {
+						div.remove();
+						form.remove();
+					}, 500);
+
+				}
+				//--------------------------------------- введение логина и пароля	---------------------
+
+				buttonEnter.addEventListener('click', logSite);
+
+				function logSite() {
+					let str = inputLog.value;
+					let pass = inputPass.value;
+					let email = inputMail.value;
+					if (str === "" || pass === "") {
+
+						let span = document.createElement('span');
+						span.id = "mistake";
+						span.className = "mistakeSpan";
+						span.textContent = "Допущена пустая строка!";
+						document.getElementById('divForm').insertAdjacentElement("beforebegin", span);
+						timedInfo();
+
+						function timedInfo() {
+							setTimeout(three, 4000);
+						}
+
+						function three() {
+							span.remove();
+						}
+
+					} else if (isNaN(+pass)) {
+
+						let span = document.createElement('span');
+						span.id = "mistake";
+						span.className = "mistakeSpan";
+						span.textContent = `Пароль ${pass}  не число!`;
+						document.getElementById('divForm').insertAdjacentElement("beforebegin", span);
+						timedInfo();
+
+						function timedInfo() {
+							setTimeout(three, 4000);
+						}
+
+						function three() {
+							span.remove();
+						}
+
+					} else if (Number(pass) !== Number(ac.password) || str !== ac.name) {
+
+
+						let span = document.createElement('span');
+						span.id = "mistake";
+						span.className = "mistakeSpan";
+						span.textContent = `Не верный логин:  ${str}  или пароль:  ${pass}`;
+						document.getElementById('divForm').insertAdjacentElement("beforebegin", span);
+						timedInfo();
+
+						function timedInfo() {
+							setTimeout(three, 4000);
+						}
+
+						function three() {
+							span.remove();
+						}
+
+					} else {
+						setTimeout(() => {
+							div.remove();
+							form.remove();
+						}, 500);
+						enterHome.textContent = "Выйти"
+						document.querySelector('.titleLogin').textContent = `Логин:  ${str}  Email:  ${email}`;
+
+						let span = document.createElement('span');
+						span.id = "mistake";
+						span.className = "mistakeSpan";
+						span.textContent = `Вы вошли в аккаунт под именем ${str}`;
+						document.getElementById('enterHom').insertAdjacentElement("beforebegin", span);
+						timedInfo();
+
+						function timedInfo() {
+							setTimeout(three, 4000);
+						}
+
+						function three() {
+							span.remove();
+						}
+
+					}
+				}
+				//----------------------------------------Выход из меню вход ------------------------------
+
+				// 	setTimeout(() => {
+				// 	document.getElementById('divForm').remove();
+				// 	document.getElementById('enterForm').remove();
+				// }, 500);
+
 			}
+
 		}
-	
-
-
-		//----------------------------------------Выход из меню вход ------------------------------
-
-		// 	setTimeout(() => {
-		// 	document.getElementById('divForm').remove();
-		// 	document.getElementById('enterForm').remove();
-		// }, 500);
-
-				} 
-	
 	}
-}
 }

@@ -1,0 +1,30 @@
+
+/*	Сукция женская одежда*/
+
+.main-title {
+	text-align: center;
+}
+
+.main-title h1 {
+	padding: 30px 0 10px 0;
+	color: rgb(206, 46, 37);
+}
+
+.radio-rotat {
+	padding: 10px 10px 30px 0;
+	text-align: left;
+}
+
+.radio-rotat > form h3 {
+	color: rgb(206, 46, 37)!important;
+}
+
+.radio-rotat > form label {
+	margin-right: 15px;
+}
+
+.radio-rotat > form input {
+	width: 20px;
+	height: 20px;
+	margin-left: 5px;
+}
