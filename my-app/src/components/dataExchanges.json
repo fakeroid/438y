@@ -1,0 +1,75 @@
+{
+	"exchanges": [{
+			"id": "binance",
+			"img": {
+				"src": "binance.jpg",
+				"alt": "Биржа 'Binance'"
+			},
+			"title": {
+				"text": "Binance",
+				"href": "https://binance.com"
+			},
+			"content": "Binance..."
+		},
+		{
+			"id": "coinbase",
+			"img": {
+				"src": "coinbase.png",
+				"alt": "Биржа 'Coinbase'"
+			},
+			"title": {
+				"text": "Coinbase",
+				"href": "https://coinbase.com"
+			},
+			"content": "Coinbase..."
+		},
+		{
+			"id": "bitfinex",
+			"img": {
+				"src": "bitfinex.png",
+				"alt": "Биржа 'Bitfinex'"
+			},
+			"title": {
+				"text": "Bitfinex",
+				"href": "https://bitfinex.com"
+			},
+			"content": "Bitfinex..."
+		},
+		{
+			"id": "exmo",
+			"img": {
+				"src": "exmo.jpg",
+				"alt": "Биржа 'Exmo'"
+			},
+			"title": {
+				"text": "Exmo",
+				"href": "https://exmo.me"
+			},
+			"content": "Exmo..."
+		},
+		{
+			"id": "bitmex",
+			"img": {
+				"src": "bitmex.jpg",
+				"alt": "Биржа 'Bitmex'"
+			},
+			"title": {
+				"text": "Bitmex",
+				"href": "https://bitmex.com"
+			},
+			"content": "Bitmex..."
+		},
+		{
+			"id": "huobi",
+			"img": {
+				"src": "huobi.jpg",
+				"alt": "Биржа 'Huobi'"
+			},
+			"title": {
+				"text": "Huobi",
+				"href": "https://www.huobi.com"
+			},
+			"content": "Huobi..."
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"questions": [{
+					"headerId": "One",
+					"question": "Вопрос 1",
+					"answer": "Ответ...1",
+					"expanded": "true"
+			},
+			{
+					"headerId": "Two",
+					"question": "Вопрос 2",
+					"answer": "Ответ...2",
+					"expanded": "false"
+			},
+			{
+				"headerId": "Two",
+				"question": "Вопрос 2",
+				"answer": "Ответ...2",
+				"expanded": "false"
+			},
+			{
+					"headerId": "Three",
+					"question": "Вопрос 3",
+					"answer": "Ответ...3",
+					"expanded": "false"
+			}
+	]
+}

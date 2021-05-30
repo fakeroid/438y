@@ -3,7 +3,7 @@ const widthUserScreen = screen.width;
 
 if (widthUserScreen < 700) {
 	document.body.style.background = "gold";
-	document.querySelector('.new-text').style.color = "#fff";
+	document.querySelector('.news').style.color = "#fff";
 	console.log(widthUserScreen);
 }
 
@@ -123,88 +123,7 @@ function registrationSite(event) {
 		console.log(ac.email);
 		console.log(ac);
 
-
-
-
-		// const registrHome = document.getElementById('registrHom');
-
-
-		//------------------------ Событие регистрации 2 с созданием формы ????? ------------------------
-
-		// document.getElementById('registrHom').addEventListener('click', registHom);
-		// function registHom() {
-		// 	 if (!document.getElementById('divForm') && !document.getElementById('registrForm') && !document.getElementById('labelLogin') && !document.getElementById('inputLogin') && document.getElementById('labelEmail') && document.getElementById('inputEmail') && !document.getElementById('btnRegistr') && !document.getElementById('btnTwo')) {
-
-		// 	 	 const div = document.createElement('div');
-		// 	 	 div.id = "divForm";
-		// 	 	 div.className = "divForm";
-
-		// 		const form = document.createElement('form');
-		// 		form.id = "registrForm";
-		// 		form.className = "formOne";
-		// 		form.textContent = "Окно регистрации";
-
-		// 		const labelLog = document.createElement('label');
-		// 		labelLog.id = "labelLogin";
-		// 		labelLog.className = "labelOne";
-		// 		labelLog.textContent = "Введите логин:";
-
-		// 		const inputLog = document.createElement('input');
-		// 		inputLog.id = "inputLogin";
-		// 		inputLog.className = "inputOne";	
-
-		// 		const labelMail = document.createElement('label');				// 	 && !document.getElementById('labelPassword') && !document.getElementById('inputPassword')
-		// 		labelMail.id = "labelEmail";
-		// 		labelMail.className = "labelThree";							//	&& document.getElementById('labelEmail') && document.getElementById('inputEmail')
-		// 		labelMail.textContent = "Введите @ mail:";
-
-		// 		const inputMail = document.createElement('input');
-		// 		inputMail.id = "inputEmail";
-		// 		inputMail.className = "inputThree";					
-
-		//	const labelPass = document.createElement('label');
-		//	labelPass.id = "labelPassword";
-		//	labelPass.className = "labelTwo";
-		//	labelPass.textContent = "Введите пароль:";
-
-		//	const inputPass = document.createElement('input');
-		//	inputPass.id = "inputPassword";
-		//	inputPass.className = "inputTwo";
-
-		// const buttonReg = document.createElement('button');
-		// buttonReg.id = "btnRegistr";
-		// buttonReg.className = "btnOne";
-		// buttonReg.textContent = "Зарегистрироватся";
-
-		// const buttonReset = document.createElement('button');
-		// buttonReset.id = "btnTwo"
-		// buttonReset.className = "btnTwo"
-		// buttonReset.textContent = "Сбросить";
-
-		//----------------- Активирование события регистрация ---------------------------------------
-
-		// 		setTimeout(() =>{ 
-		// 			document.getElementById('registrHom').insertAdjacentElement("afterend", div);
-		// 			document.getElementById('registrHom').insertAdjacentElement("afterbegin", form);
-
-		// 			document.getElementById('registrHom').insertAdjacentElement("afterend", labelLog);
-		// 			document.getElementById('registrHom').insertAdjacentElement("afterbegin", inputLog);
-
-		// 			document.getElementById('registrHom').insertAdjacentElement("afterend", labelMail);
-		// 			document.getElementById('registrHom').insertAdjacentElement("afterbegin", inputMail);
-
-		// 		//	document.getElementById('registrHom').insertAdjacentElement("afterend", labelPass);
-		// 		//	document.getElementById('registrHom').insertAdjacentElement("afterbegin", inputPass);
-
-		// 			document.getElementById('registrHom').insertAdjacentElement("beforeend", buttonReg);
-		// 			document.getElementById('registrHom').insertAdjacentElement("beforeend", buttonReset);
-		// 		}, 500);
-
-		// 	} else {
-
-		// 	}
-
-		// }
+//		--------------------- формпа авторизации ----------------------------
 
 		const enterHome = document.getElementById('enterHom');
 		// console.log(enterHome);
@@ -317,8 +236,8 @@ function registrationSite(event) {
 				function logSite() {
 					let str = inputLog.value;
 					let pass = inputPass.value;
-					let email = inputMail.value;
-					if (str === "" || pass === "") {
+					// let email = inputMail.value;
+					if (str === "" || pass === "" ) {
 
 						let span = document.createElement('span');
 						span.id = "mistake";
@@ -376,7 +295,7 @@ function registrationSite(event) {
 							form.remove();
 						}, 500);
 						enterHome.textContent = "Выйти"
-						document.querySelector('.titleLogin').textContent = `Логин:  ${str}  Email:  ${email}`;
+						document.querySelector('.titleLogin').textContent = `:  ${str}`;
 
 						let span = document.createElement('span');
 						span.id = "mistake";
@@ -406,4 +325,70 @@ function registrationSite(event) {
 
 		}
 	}
+}
+
+//	------------------------------- Меню выбора покупки по категортям -------------------------
+
+const optionOne = document.getElementById('optionOne');
+const optionTwo = document.getElementById('optionTwo');
+const optionThree = document.getElementById('optionThree');
+const optionFour = document.getElementById('optionFour');
+const optionFive = document.getElementById('optionFive');
+const optionSix = document.getElementById('optionSix');
+const optionSeven = document.getElementById('optionSeven');
+const optionEight = document.getElementById('optionEight');
+const optionNine = document.getElementById('optionNine');
+const optionTen = document.getElementById('optionTen');
+const optionZero = document.getElementById('optionZero');
+
+let check = document.querySelectorAll('input[type="radio"]');
+for (let i = 0; i < check.length; i++){
+	check[i].addEventListener('click', function(event) {
+																													// alert(this.value)
+		if(this.value == "spring") {
+//------------------------	Весенняя коллекция	----------------
+			optionTwo.style = "display: flex";
+			optionThree.style = "display: flex";
+			optionEight.style = "display: flex";
+			optionNine.style = "display: flex";
+
+			optionFour.style = "display: none";
+			optionFive.style = "display: none";
+			optionSix.style = "display: none";
+			optionSeven.style = "display: none";
+
+		} else if (this.value == "summer") {
+//-------------------------	Удоляем весеннюю коллекцию -------------------------------
+			optionTwo.style = "display: none";
+			optionThree.style = "display: none";
+			optionEight.style = "display: none";
+			optionNine.style = "display: none";
+			
+			//---------------------------------------- Вставляем летнюю коллекцию	-----------------------------------
+
+			optionFour.style = "display: flex";
+			optionFive.style = "display: flex";
+			optionSix.style = "display: flex";
+			optionSeven.style = "display: flex";
+	
+		} else if (this.value == "autumn") {
+
+//--------------------------------------- Удоляни летнюю коллекцию -------------------------------------------
+
+			optionFour.style = "display: none";
+			optionFive.style = "display: none";
+			optionSix.style = "display: none";
+			optionSeven.style = "display: none";
+
+			//-----------------------------------Вставляю осеннюю колекцию ------------------------------------------
+
+			optionOne.style = "display: flex";
+			optionTen.style = "display: flex";
+			optionZero.style = "display: flex";
+			
+		} else {
+			alert("4");
+		}
+
+	});
 }

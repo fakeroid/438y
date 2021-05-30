@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Магаин "Важное событие"- женский отдел</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<link rel="stylesheet" href="css/event.css">
 	<link rel="stylesheet" href="css/event_2.css">
 </head>
@@ -22,7 +23,10 @@
 						<a class="nav-link" href="index.html">Дом</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link actives" href="#">Женская одежда</a>
+						<a class="nav-link" href="#main">Варианты</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link actives" href="#galery">Женская одежда</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -36,9 +40,9 @@
 					</li>
 				</ul>
 				<form id="headerForm" class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 d-flex main-form">
-					<input class="form-control me-2 main-control" type="search" placeholder="Search"
+					<input class="form-control me-2 main-control" type="search" placeholder="Искать"
 						aria-label="Поиск по странице">
-					<button class="btn btn-outline-success main-control" type="submit">Search</button>
+					<button class="btn btn-outline-success main-control" type="submit">Начать</button>
 				</form>
 			</div>
 		</div>
@@ -69,46 +73,103 @@
 				<div class="row main-title">
 					<h1>Женская одежда</h1>
 					<div class="col-xl-6 col-lg-6 col-md-12">
-							<div class="radio-rotat type-clothing">
-								<form>
-									<h3>Сезон</h3>
-									<label>Весна<input type="radio"></label>
-									<label>Лето<input type="radio"></label>
-									<label>Осень<input type="radio"></label>
-									<label>Зима<input type="radio"></label>
-								</form>
-							</div>
-						
-							<div class="radio-rotat type-clothing">
-								<form>
-									<h3>Размер</h3>
-									<label>XXL<input type="radio"></label>
-									<label>XL<input type="radio"></label>
-									<label>L<input type="radio"></label>
-									<label>M<input type="radio"></label>
-									<label>S<input type="radio"></label>
-								</form>
-							</div>
-							<div class="radio-rotat size-rule">
-								<form>
-									<h3>Вид</h3>
-									<label>Повседневная<input type="radio"></label>
-									<label>Вечерняя<input type="radio"></label>
-									<label>Спортивная<input type="radio"></label>
-								</form>
-							</div>
-							<div class="radio-rotat price-scale">
-								<form>
-									<h3>Цена</h3>
-									<label>1000-4999 руб.<input type="radio"></label>
-									<label>5000-9999 руб.<input type="radio"></label>
-									<label>10000-20000 руб.<input type="radio"></label>
-								</form>
-							</div>
-			
+						<button type="reset" class="btn-reset">Сбросить</button>
+						<div class="radio-rotat">
+							<form id="seasonForm" class="season">
+								<h3>Сезон</h3>
+								<label>Весна<input type="radio"></label>
+								<label>Лето<input type="radio"></label>
+								<label>Осень<input type="radio"></label>
+								<label>Зима<input type="radio"></label>
+								<button type="submit" class="radio-btn">Искать</button>
+							</form>
+						</div>
+
+						<div class="radio-rotat">
+							<form id="sizeForm" class="size">
+								<h3>Размер</h3>
+								<label>XXL<input type="radio"></label>
+								<label>XL<input type="radio"></label>
+								<label>L<input type="radio"></label>
+								<label>M<input type="radio"></label>
+								<label>S<input type="radio"></label>
+								<button type="submit" class="radio-btn">Искать</button>
+							</form>
+						</div>
+						<div class="radio-rotat">
+							<form id="viewForm" class="view">
+								<h3>Вид</h3>
+								<label>Куртки<input type="radio"></label>
+								<label>Брюки<input type="radio"></label>
+								<label>Рубашки<input type="radio"></label>
+								<label>Костюмы<input type="radio"></label>
+								<button type="submit" class="radio-btn">Искать</button>
+							</form>
+						</div>
+						<div class="radio-rotat">
+							<form id="scaileForm" class="scaile">
+								<h3>Цена</h3>
+								<label>1000-4999 руб.<input type="radio"></label>
+								<label>5000-9999 руб.<input type="radio"></label>
+								<label>10000-20000 руб.<input type="radio"></label>
+								<button type="submit" class="radio-btn">Искать</button>
+							</form>
+						</div>
+
 					</div>
 					<div class="col-xl-6 col-lg-6 col-md-12">
-						
+						<div class="nichChoice">
+							<h2>Вы Это искали ?</h2>
+							<div id="optionOne">
+								<div class="imagOne"></div>
+								<div class="contentOne"></div>
+							</div>
+
+							<div id="optionOne">
+								<div class="imagTwo"></div>
+								<div class="contentTwo"></div>
+							</div>
+
+							<div id="optionOne">
+								<div class="imagThree"></div>
+								<div class="contentThree"></div>
+							</div>
+
+							<div id="optionOne">
+								<div class="imagFuor"></div>
+								<div class="contentFuor"></div>
+							</div>
+
+							<div id="optionOne">
+								<div class="imagFive"></div>
+								<div class="contentFive"></div>
+							</div>
+
+							<div id="optionOne">
+								<div class="imagSix"></div>
+								<div class="contentSix"></div>
+							</div>
+
+							<div id="optionOne">
+								<div class="imagSeven"></div>
+								<div class="contentSeven"></div>
+							</div>
+
+							<div id="optionOne">
+								<div class="imagEighet"></div>
+								<div class="contentEighet"></div>
+							</div>
+
+							<div id="optionOne">
+								<div class="imagNine"></div>
+								<div class="contentNine"></div>
+							</div>
+
+							<div id="optionOne">
+								<div class="imagTen"></div>
+								<div class="contentTen"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -190,6 +251,9 @@
 						</form>
 					</div>
 				</div>
+				<span>
+					<h3 class="copyright">Все права защишены 2021 год</h3>
+				</span>
 			</div>
 		</div>
 	</footer>
