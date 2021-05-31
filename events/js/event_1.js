@@ -123,7 +123,7 @@ function registrationSite(event) {
 		console.log(ac.email);
 		console.log(ac);
 
-//		--------------------- формпа авторизации ----------------------------
+		//		--------------------- формпа авторизации ----------------------------
 
 		const enterHome = document.getElementById('enterHom');
 		// console.log(enterHome);
@@ -237,7 +237,7 @@ function registrationSite(event) {
 					let str = inputLog.value;
 					let pass = inputPass.value;
 					// let email = inputMail.value;
-					if (str === "" || pass === "" ) {
+					if (str === "" || pass === "") {
 
 						let span = document.createElement('span');
 						span.id = "mistake";
@@ -339,14 +339,15 @@ const optionSeven = document.getElementById('optionSeven');
 const optionEight = document.getElementById('optionEight');
 const optionNine = document.getElementById('optionNine');
 const optionTen = document.getElementById('optionTen');
-const optionZero = document.getElementById('optionZero');
+const optionEleven = document.getElementById('optionEleven');
+const optionTwelve = document.getElementById('optionTwelve');
 
-let check = document.querySelectorAll('input[type="radio"]');
-for (let i = 0; i < check.length; i++){
-	check[i].addEventListener('click', function(event) {
-																													// alert(this.value)
-		if(this.value == "spring") {
-//------------------------	Весенняя коллекция	----------------
+let check = document.querySelectorAll('input[name="seasonShop"]');
+for (let i = 0; i < check.length; i++) {
+	check[i].addEventListener('click', function (event) {
+		// alert(this.value)
+		if (this.value === "spring") {
+			//------------------------	Весенняя коллекция	----------------
 			optionTwo.style = "display: flex";
 			optionThree.style = "display: flex";
 			optionEight.style = "display: flex";
@@ -358,22 +359,26 @@ for (let i = 0; i < check.length; i++){
 			optionSeven.style = "display: none";
 
 		} else if (this.value == "summer") {
-//-------------------------	Удоляем весеннюю коллекцию -------------------------------
+			//-------------------------	Удоляем весеннюю коллекцию -------------------------------
 			optionTwo.style = "display: none";
 			optionThree.style = "display: none";
 			optionEight.style = "display: none";
 			optionNine.style = "display: none";
-			
+
+			setTimeout(() => {
+				optionOne.style = "display: none";
+				optionTen.style = "display: none";
+			}, 500);
 			//---------------------------------------- Вставляем летнюю коллекцию	-----------------------------------
 
 			optionFour.style = "display: flex";
 			optionFive.style = "display: flex";
 			optionSix.style = "display: flex";
 			optionSeven.style = "display: flex";
-	
+
 		} else if (this.value == "autumn") {
 
-//--------------------------------------- Удоляни летнюю коллекцию -------------------------------------------
+			//--------------------------------------- Удоляни летнюю коллекцию -------------------------------------------
 
 			optionFour.style = "display: none";
 			optionFive.style = "display: none";
@@ -381,14 +386,102 @@ for (let i = 0; i < check.length; i++){
 			optionSeven.style = "display: none";
 
 			//-----------------------------------Вставляю осеннюю колекцию ------------------------------------------
-
-			optionOne.style = "display: flex";
-			optionTen.style = "display: flex";
-			optionZero.style = "display: flex";
-			
+			optionEleven.style = "display: flex";
+			optionTwelve.style = "display: flex";
 		} else {
-			alert("4");
+
+			setTimeout(() => {
+				optionEleven.style = "display: none";
+				optionTwelve.style = "display: none";
+			}, 500);
+			//------------------------------ Вставляю зимнюю коллекцию	------------------------------------
+			setTimeout(() => {
+				optionOne.style = "display: flex";
+				optionTen.style = "display: flex";
+			}, 500);
 		}
 
 	});
+}
+
+//---------------------------------- выбор по цене-------------------------------
+
+let scaleShop = document.querySelectorAll('input[name="scale"]');
+let prices = document.querySelectorAll('input[name="prices"]');
+const titleMens = document.querySelector('.title-mens');
+const mens = document.querySelectorAll('.mens');
+
+
+for (let i = 0; i < scaleShop.length; i++) {
+
+	scaleShop[i].addEventListener('click', function () {
+
+		for (let j = 0; j < prices.length; j++) {
+
+			let option = Number(prices[j].value);
+
+			if (option > Number(1000) && option < Number(scaleShop[i].value)) {
+				mens[j].style = "display: flex";
+				document.querySelector('.title-mens').style = "display: none";
+
+			} else {
+				document.querySelectorAll('.mens')[j].style = "display: none";
+			}
+			
+		}
+
+	});
+	continue;
+}
+
+//---------------------------------- выбор По размеру-------------------------------
+
+let sizeShop = document.querySelectorAll('input[name="sizeShop"]');
+let size = document.querySelectorAll('input[name="size"]');
+
+for (let i = 0; i < sizeShop.length; i++) {
+
+	sizeShop[i].addEventListener('click', function () {
+
+		for (let j = 0; j < size.length; j++) {
+
+			let option = Number(size[j].value);
+
+			if ( option == Number(sizeShop[i].value)) {
+				mens[j].style = "display: flex";
+				titleMens.style = "display: none";
+
+			} else {
+		
+			}
+			
+		}
+		
+	});
+	continue;
+}
+
+//----------------------------------------	Выбор по категории товара  ---------------------------
+
+let viewShop = document.querySelectorAll('input[name="viewShop"]');
+let jockets = document.querySelectorAll('.jockets');
+console.log(jockets);
+for (let i = 0; i < viewShop.length; i++) {
+
+	viewShop[i].addEventListener('click', function () {
+		console.log(viewShop.value);
+
+		// for (let men in mens) {
+			// if ( viewShop.value === "jockets") {
+			// 	jockets.style = "display: flex";
+			// 	titleMens.style = "display: none";
+
+			// } else {
+			// 	document.querySelectorAll('.mens').style = "display: none";
+			// }
+			// return men
+		// }
+
+	});
+	
 }
