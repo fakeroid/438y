@@ -92,15 +92,15 @@ function registrationSite(event) {
 
 		// alert(`Введеные пароли не совпадают`);
 	} else {
-		let ac = { //	Создаём обЪект хронящий данные о пользователе
+		let account = { //	Создаём обЪект хронящий данные о пользователе
 			name: "Администратор",
 			password: 12345,
 			email: "Mariy@mail.ru",
 		}
 
-		ac.name = log;
-		ac.password = Number(pas);
-		ac.email = ema;
+		account.name = log;
+		account.password = Number(pas);
+		account.email = ema;
 		document.querySelector('#registrHom').style.display = "none";
 
 		let span = document.createElement('span');
@@ -118,10 +118,10 @@ function registrationSite(event) {
 			span.remove();
 		}
 
-		console.log(ac.name);
-		console.log(ac.password);
-		console.log(ac.email);
-		console.log(ac);
+		console.log(account.name);
+		console.log(account.password);
+		console.log(account.email);
+		console.log(account);
 
 		//		--------------------- формпа авторизации ----------------------------
 
@@ -234,10 +234,10 @@ function registrationSite(event) {
 				buttonEnter.addEventListener('click', logSite);
 
 				function logSite() {
-					let str = inputLog.value;
+					let login = inputLog.value;
 					let pass = inputPass.value;
 					// let email = inputMail.value;
-					if (str === "" || pass === "") {
+					if (login === "" || pass === "") {
 
 						let span = document.createElement('span');
 						span.id = "mistake";
@@ -271,13 +271,13 @@ function registrationSite(event) {
 							span.remove();
 						}
 
-					} else if (Number(pass) !== Number(ac.password) || str !== ac.name) {
+					} else if (Number(pass) !== Number(account.password) || login !== account.name) {
 
 
 						let span = document.createElement('span');
 						span.id = "mistake";
 						span.className = "mistakeSpan";
-						span.textContent = `Не верный логин:  ${str}  или пароль:  ${pass}`;
+						span.textContent = `Не верный логин:  ${login}  или пароль:  ${pass}`;
 						document.getElementById('divForm').insertAdjacentElement("beforebegin", span);
 						timedInfo();
 
@@ -295,12 +295,12 @@ function registrationSite(event) {
 							form.remove();
 						}, 500);
 						enterHome.textContent = "Выйти"
-						document.querySelector('.titleLogin').textContent = `:  ${str}`;
+						document.querySelector('.titleLogin').textContent = `:  ${login}`;
 
 						let span = document.createElement('span');
 						span.id = "mistake";
 						span.className = "mistakeSpan";
-						span.textContent = `Вы вошли в аккаунт под именем ${str}`;
+						span.textContent = `Вы вошли в аккаунт под именем ${login}`;
 						document.getElementById('enterHom').insertAdjacentElement("beforebegin", span);
 						timedInfo();
 
@@ -328,7 +328,11 @@ function registrationSite(event) {
 }
 
 //	------------------------------- Меню выбора покупки по категортям -------------------------
-
+const seasonForms = document.getElementById('seasonForms');
+const sizeForm = document.getElementById('sizeForm');
+const viewForm = document.getElementById('viewForm');
+const	pricesForm = document.getElementById('pricesForm');
+const optionTitle = document.getElementById('optionTitle');
 const optionOne = document.getElementById('optionOne');
 const optionTwo = document.getElementById('optionTwo');
 const optionThree = document.getElementById('optionThree');
@@ -341,11 +345,19 @@ const optionNine = document.getElementById('optionNine');
 const optionTen = document.getElementById('optionTen');
 const optionEleven = document.getElementById('optionEleven');
 const optionTwelve = document.getElementById('optionTwelve');
+const optionThitreen = document.getElementById('optionThitreen');
+const optionFourteen = document.getElementById('optionFourteen');
+const optionFivteen = document.getElementById('optionFivteen');
+const optionSeventeen = document.getElementById('optionSeventeen');
+const optionEighteen = document.getElementById('optionEighteen');
+const optionNineteen = document.getElementById('optionNineteen');
+const optionTwenty = document.getElementById('optionTwenty');
+const optionTwentyone = document.getElementById('optionTwentyone');
 
 let check = document.querySelectorAll('input[name="seasonShop"]');
 for (let i = 0; i < check.length; i++) {
 	check[i].addEventListener('click', function (event) {
-		// alert(this.value)
+		// alert(this.value);
 		if (this.value === "spring") {
 			//------------------------	Весенняя коллекция	----------------
 			optionTwo.style = "display: flex";
@@ -368,6 +380,7 @@ for (let i = 0; i < check.length; i++) {
 			setTimeout(() => {
 				optionOne.style = "display: none";
 				optionTen.style = "display: none";
+				optionTitle.style = "display: none"
 			}, 500);
 			//---------------------------------------- Вставляем летнюю коллекцию	-----------------------------------
 
@@ -380,12 +393,14 @@ for (let i = 0; i < check.length; i++) {
 
 			//--------------------------------------- Удоляни летнюю коллекцию -------------------------------------------
 
+		
 			optionFour.style = "display: none";
 			optionFive.style = "display: none";
 			optionSix.style = "display: none";
 			optionSeven.style = "display: none";
 
 			//-----------------------------------Вставляю осеннюю колекцию ------------------------------------------
+			optionSeventeen.style = "display: flex"
 			optionEleven.style = "display: flex";
 			optionTwelve.style = "display: flex";
 		} else {
@@ -393,9 +408,11 @@ for (let i = 0; i < check.length; i++) {
 			setTimeout(() => {
 				optionEleven.style = "display: none";
 				optionTwelve.style = "display: none";
+				optionTitle.style = "display: none";
 			}, 500);
 			//------------------------------ Вставляю зимнюю коллекцию	------------------------------------
 			setTimeout(() => {
+				optionFour.style = "display: flex"
 				optionOne.style = "display: flex";
 				optionTen.style = "display: flex";
 			}, 500);
@@ -421,7 +438,7 @@ for (let i = 0; i < scaleShop.length; i++) {
 			let option = Number(prices[j].value);
 
 			if (option > Number(1000) && option < Number(scaleShop[i].value)) {
-				mens[j].style = "display: flex";
+				document.querySelectorAll('.mens')[j].style = "display: flex";
 				document.querySelector('.title-mens').style = "display: none";
 
 			} else {
@@ -465,23 +482,116 @@ for (let i = 0; i < sizeShop.length; i++) {
 
 let viewShop = document.querySelectorAll('input[name="viewShop"]');
 let jockets = document.querySelectorAll('.jockets');
-console.log(jockets);
+let trousers = document.querySelectorAll('.trousers');
+let shirt = document.querySelectorAll('.shirt');
+let suit = document.querySelectorAll('.suit');
+let sweatshirts = document.querySelectorAll('.sweatshirts');
+
 for (let i = 0; i < viewShop.length; i++) {
 
-	viewShop[i].addEventListener('click', function () {
-		console.log(viewShop.value);
+	viewShop[i].addEventListener('click', function (value) {
+		// alert(this.value);
+		//	-------	Блок куртки	----------------------
+		if (this.value === "jockets") {
+			let number = 1;
+			switch (number) {
+				case 1:
+					for (let j = 0; j < mens.length; j++) {
+						let option = this.value;
+						if ( option === "jockets") {
+							document.querySelectorAll('.jockets')[j].style = "display: flex";
+							optionTitle.style = "display: none";
+							document.querySelectorAll('.trousers')[j].style = "display: none";
+							document.querySelectorAll('.shirt')[j].style = "display: none";
+						} else {	
+			
+						}
+					}
+					break;
+			}
+				// Блок куртки конец----------
+				alert(this.value[i]);
+		} else if (this.value === "trousers") {
+			let number = 1;
+			switch (number) {
+				case 1:
+				for (let j = 0; j < mens.length; j++) {
+					let option = this.value;
+						if (option === "trousers") {
+							document.querySelectorAll('.trousers')[j].style = "display: flex";
+							optionTitle.style = "display: none";
+							document.querySelectorAll('.jockets')[j].style = "display: none";
+							document.querySelectorAll('.shirt')[j].style = "display: none";
+						}	else {
 
-		// for (let men in mens) {
-			// if ( viewShop.value === "jockets") {
-			// 	jockets.style = "display: flex";
-			// 	titleMens.style = "display: none";
+					}
+				}
+				break;	
+			}
+				//	Блок брюки конец -------------------
 
-			// } else {
-			// 	document.querySelectorAll('.mens').style = "display: none";
-			// }
-			// return men
-		// }
+		}	else if (this.value === "shirt") {
+			let number = 1;
+			switch (number) {
+				case 1:
+				for (let j = 0; j < mens.length; j++) {
+					let option = this.value;
+					if (option === "shirt") {
+						document.querySelectorAll('.shirt')[j].style = "display: flex";
+							optionTitle.style = "display: none";
+							document.querySelectorAll('.jockets')[j].style = "display: none";
+							document.querySelectorAll('.trousers')[j].style = "display: none";
+					}	else {
 
+					}
+				}
+				break;
+			}
+				//	Блок рубашки конец ------------------------
+				console.log(sweatshirts);	
+		}	else if (this.value === "suit") {
+			let number = 1;
+			switch (number) {
+				case 1:
+					for (let j = 0; j < mens.length; j++) {
+						let option = this.value;
+						if (option === "suit") {
+							document.querySelectorAll('.suit')[j].style = "display: flex";
+							document.querySelectorAll('.jockets')[j].style = "display: none";
+							document.querySelectorAll('.trousers')[j].style = "display: none";
+							document.querySelectorAll('.shirt')[j].style = "display: none";
+						}	else {
+
+						}
+					}	
+					break;
+			}
+				//	Блок костюмы конец	--------------------
+			
+		}	else if (this.value === "sweatshirts") {
+			let number = 1;
+			switch (number) {
+				case 1:
+					for (let j = 0; j < mens.length; j++) {
+						let option = this.value;
+
+						if (option === "sweatshirts") {
+							document.querySelectorAll('.sweatshirts')[j].style = "display: flex";
+							document.querySelectorAll('.jockets')[j].style = "display: none";
+							document.querySelectorAll('.trousers')[j].style = "display: none";
+							document.querySelectorAll('.shirt')[j].style = "display: none";
+							document.querySelectorAll('.suit')[j].style = "display: none";
+						}	else {
+
+						}
+					}
+				break;
+			}
+				//		Блок кофты конец -----------------------
+		} 
+			
+	return value;
 	});
-	
+	continue;
 }
+//		-------------------------------------------------------

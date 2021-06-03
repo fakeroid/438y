@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Магаин "Важное событие"- женский отдел</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="css/event.css">
+	<link rel="stylesheet" href="css/event_2.css">
+</head>
+
+<body>
+	<header id="home" class="fixed-top header">
+		<div class="container">
+			<div class="row main-header">
+				<div id="headerLogo" class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 header-logo">
+					<span class="logo">Важное событие...</span>
+				</div>
+				<ul class="nav col-xl-5 col-lg-5 col-md-6 col-sm-12 col-xs-12 main-bar">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Дом</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#main">Варианты</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link actives" href="#galery">Женская одежда</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">Каталог</a>
+						<ul class="dropdown-menu main-dropdown" aria-labelledby="navbarDropdownMenuLink">
+							<li><a class="dropdown-item" href="mens.html">Мужская одежда</a></li>
+							<li><a class="dropdown-item" href="#">Детская одежда</a></li>
+							<li><a class="dropdown-item" href="#">Аксесуары</a></li>
+							<li><a class="dropdown-item" href="#">Сток</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form id="headerForm" class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 d-flex main-form">
+					<input class="form-control me-2 main-control" type="search" placeholder="Искать"
+						aria-label="Поиск по странице">
+					<button class="btn btn-outline-success main-control" type="submit">Начать</button>
+				</form>
+			</div>
+		</div>
+	</header>
+	<main id="main">
+		<section class="main-nav">
+			<div class="container">
+				<div class="row">
+					<div class="col-4 contact">
+						<a href="../index.html"><span><img class="header-svg" src="img/haus.svg" alt="телефон"></span>+7 (495) 234
+							00 00</a>
+						<p>Бесплатный звонок по РФ</p>
+					</div>
+					<div class="col-4 registration">
+						<a id="enterHom" class="registr" href="#"><span><img class="header-svg" src="img/password.svg"
+									alt="регистрация"></span> Войти</a>
+						<span id="enter" class="span-enter"><a id="registrHom" class="registr"
+								href="#registrationPortal">Регистрация</a><span class="titleLogin"></span></span>
+					</div>
+					<div class="col-4 basket">
+						<a href=""><span><img class="header-svg" src="img/basket.svg" alt="корзина"></span>Корзина</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="title">
+			<div class="container">
+				<div class="row main-title">
+					<h1>Женская одежда</h1>
+				
+						<!-- 	Раздел формы		 -->
+						<div class="col-xl-6 col-lg-6 col-md-12">
+							<button type="reset" class="btn-reset">Сбросить</button>
+							<div class="radio-rotat">
+								<form id="seasonForm" class="season">
+									<h3>Сезон</h3>
+									<label>Весна<input id="spring" type="radio" name="seasonShop" value="spring" checked></label>
+									<label>Лето<input id="summer" type="radio" name="seasonShop" value="summer"></label>
+									<label>Осень<input id="autumn" type="radio" name="seasonShop" value="autumn"></label>
+									<label>Зима<input id="winter" type="radio" name="seasonShop" value="winter"></label>
+								</form>
+							</div>
+	
+							<div class="radio-rotat type-clothing">
+								<form id="sizeForm" class="size">
+									<h3>Размер</h3>
+									<label>XL<input type="radio" name="sizeShop" value="5" checked></label>
+									<label>L<input type="radio" name="sizeShop" value="4"></label>
+									<label>M<input type="radio" name="sizeShop" value="3"></label>
+									<label>S<input type="radio" name="sizeShop" value="2"></label>
+									<label>Sm<input type="radio" name="sizeShop" value="1"></label>
+								</form>
+							</div>
+							<div class="radio-rotat">
+								<form id="viewForm" class="view">
+									<h3>Вид</h3>
+									<label>Куртки<input type="radio" name="viewShop" value="jockets" checked></label>
+									<label>Юбки<input type="radio" name="viewShop" value="skirt"></label>
+									<label>Платья<input type="radio" name="viewShop" value="dress"></label>
+									<label>Костюмы<input type="radio" name="viewShop" value="suit"></label>
+									<label>джемперы<input type="radio" name="viewShop" value="sweatshirts"></label>
+								</form>
+							</div>
+							<div class="radio-rotat price-scale">
+								<form id="pricesForm">
+									<h3>Цена</h3>
+									<label>до 5000 руб.<input type="radio" name="scale" value="4999" checked></label>
+									<label>до 10000 руб.<input type="radio" name="scale" value="9999"></label>
+									<label> до 20000 руб.<input type="radio" name="scale" value="19999"></label>
+									<label> до 30000 руб.<input type="radio" name="scale" value="29999"></label>
+								</form>
+							</div>
+						</div>
+						<!-- Конец раздела формы -->
+
+					<div class="col-xl-6 col-lg-6 col-md-12">
+						<div class="nichChoice">
+							<h2>Вы Это искали ?</h2>
+									<!-- Титульная картачка -->
+									<div id="optionTitle" class="title-mens jockets">
+										<div class="images">
+											<img src="womensImg/title_mens.jpg" alt="куртка">
+										</div>
+										<div class="contents">
+											<h3>Куртка</h3>
+											<span>"Warmth & comfort"</span>
+											<span>Народная марка</span>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="9800" checked></label>
+												<span class="content-praice"> 9800 руб.</span>
+											</form>
+											<p>Российский бренд "Warmth & comfort"</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+		
+									<!-- первая картачка -->
+									<div id="optionOne" class="mens winter sweatshirts">
+										<div class="images">
+											<img src="womensImg/mens_1.jpg" alt="кофта">
+										</div>
+										<div class="contents">
+											<h3>Кофта вязанная</h3>
+											<span>"Grand"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<!-- <label>XXL<input type="radio" name="size" value="5"></label> -->
+												<label>XL<input type="radio" name="size" value="4" checked></label>
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!-- <label>M<input type="radio" name="size" value="2"></label> -->
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="4750" checked></label>
+												<span class="content-praice"> 4750 руб.</span>
+											</form>
+											<p>Кофта свободного покроя из серии эмитации ручной вязки. Расширенные к низу рукова в сочетании с прямым узором вязки, придают особый шарм</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+
+									<!-- Вторая картачка	 -->
+									<div id="optionTwo" class="mens spring sweatshirts animate__animated animate__backInRight">
+										<div class="images">
+											<img src="womensImg/mens_2.jpg" alt="кофта">
+										</div>
+										<div class="contents">
+											<h3>Блузка</h3>
+											<span>"Grand"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5"></label>
+												<!-- <label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!-- <label>M<input type="radio" name="size" value="2"></label> -->
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="2100" checked></label>
+												<span class="content-praice"> 2100 руб.</span>
+											</form>
+											<p>Эта блузка подойдет, как для повыедневной носки так и для элемента вечернего наряда.</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+
+									<!-- 	Третья картачка -->
+									<div id="optionThree" class="mens spring skirt animate__animated animate__backInDown">
+										<div class="images">
+											<img src="womensImg/mens_3.jpg" alt="спортивный костюм">
+										</div>
+										<div class="contents">
+											<h3>Юбкф в шотландскую клетку</h3>
+											<span>"Nordli"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5" checked></label>
+												<label>XL<input type="radio" name="size" value="4" checked></label>
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!-- <label>M<input type="radio" name="size" value="2"></label> -->
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="13200" checked></label>
+												<span class="content-praice"> 13200 руб.</span>
+											</form>
+											<p>100% шерсть. Ассиметричный покрой её изюминка</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+
+									<!-- 	Четвёртая картачка -->
+									<div id="optionFour" class="mens winter jockets animate__animated animate__backInDown">
+										<div class="images">
+											<img src="womensImg/mens_4.jpg" alt="куртка">
+										</div>
+										<div class="contents">
+											<h3>Куртка</h3>
+											<span>"Nordli"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<!-- <label>XXL<input type="radio" name="size" value="5"></label>
+											<label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<label>M<input type="radio" name="size" value="2" checked></label>
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="4449" checked></label>
+												<span class="content-praice"> 4449 руб.</span>
+											</form>
+											<p>Модельный ряд "Nordli", как всегда радует высококачественным исполнением.</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+
+									<!-- 	Пятая картачка -->
+									<div id="optionFive" class="mens spring sweatshirts animate__animated animate__backInRight">
+										<div class="images">
+											<img src="womensImg/mens_5.jpg" alt="кофта">
+										</div>
+										<div class="contents">
+											<h3>Кофта</h3>
+											<span>"Costa Rica"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<!-- <label>XXL<input type="radio" name="size" value="5"></label> -->
+												<label>XL<input type="radio" name="size" value="4" checked></label>
+												<!-- <label>L<input type="radio" name="size" value="3" ></label> -->
+												<label>M<input type="radio" name="size" value="2" checkes></label>
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="3100" checked></label>
+												<span class="content-praice"> 3100 руб.</span>
+											</form>
+											<p>Для преданных поклонников "Costa Rica" стиля в одежде.</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+
+									<!-- 	Шестая картачка -->
+									<div id="optionSix" class="mens summer dress">
+										<div class="images">
+											<img src="womensImg/mens_6.jpg" alt="платье">
+										</div>
+										<div class="contents">
+											<h3>Платье</h3>
+											<span>"Guixiang</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<!-- <label>XXL<input type="radio" name="size" value="5"></label> -->
+												<label>XL<input type="radio" name="size" value="4" checked></label>
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!-- <label>M<input type="radio" name="size" value="2"></label>
+											<label>S<input type="radio" name="size" value="1"></label> -->
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="2949" checked></label>
+												<span class="content-praice"> 2949 руб.</span>
+											</form>
+											<p>Модельный ряд "Guixiang", как всегда радует высококачественным хлопком.</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+
+									<!-- 	Седьмая картачка -->
+									<div id="optionSeven" class="mens summer dress animate__animated animate__backInRight">
+										<div class="images">
+											<img src="womensImg/mens_7.jpg" alt="Платье">
+										</div>
+										<div class="contents">
+											<h3>Платье</h3>
+											<span>"Eugene"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<!-- <label>XXL<input type="radio" name="size" value="5"></label> -->
+												<label>XL<input type="radio" name="size" value="4" checked></label>
+												<!-- <label>L<input type="radio" name="size" value="3"></label>
+											<label>M<input type="radio" name="size" value="2"></label> -->
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="7990" checked></label>
+												<span class="content-praice"> 7990 руб.</span>
+											</form>
+											<p>Платье с цветочным арнаментом украсит гардероб лбой изысканной модницы</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+
+									<!-- 	Восьмая картачка -->
+									<div id="optionEight" class="mens summer dress animate__animated animate__backInRight">
+										<div class="images">
+											<img src="womensImg/mens_8.jpg" alt="Платье">
+										</div>
+										<div class="contents">
+											<h3>Платье</h3>
+											<span>"Balmora"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5" checked></label>
+												<!-- <label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<label>M<input type="radio" name="size" value="2" checked></label>
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="11200" checked></label>
+												<span class="content-praice"> 11200 руб.</span>
+											</form>
+											<p>Платье выполнена из натурального шёлка. Модель с легким клешением.</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+
+									<!-- 	Девятая картачка -->
+									<div id="optionNine" class="mens summer dress animate__animated animate__backInDown">
+										<div class="images">
+											<img src="womensImg/mens_9.jpg" alt="Платье">
+										</div>
+										<div class="contents">
+											<h3>Платье</h3>
+											<span>"Colorado"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<!-- <label>XXL<input type="radio" name="size" value="5"></label>
+											<label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!-- <label>M<input type="radio" name="size" value="2"></label> -->
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="6900" checked></label>
+												<span class="content-praice"> 6900 руб.</span>
+											</form>
+											<p>Платье с мелким принтом.</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+									
+									<!-- 	Десятая картачка -->
+									<div id="optionTen" class="mens winter suit">
+										<div class="images">
+											<img src="womensImg/mens_10.jpg" alt="Костюм">
+										</div>
+										<div class="contents">
+											<h3>Костюм</h3>
+											<span>"Warmth & comfort"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5" checked></label>
+												<!-- <label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!-- <label>M<input type="radio" name="size" value="2"></label> -->
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="12500" checked></label>
+												<span class="content-praice"> 12500 руб.</span>
+											</form>
+											<p>Пуховик из шерстяной ткани. Прилегающий элегантный покрой.</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+									<!-- 	Одиннадцатая картачка -->
+									<div id="optionEleven" class="mens winter">
+										<div class="images">
+											<img src="womensImg/mens_11.jpg" alt="жакет">
+										</div>
+										<div class="contents">
+											<h3>Жакет</h3>
+											<span>"Warmth & comfort"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<!-- <label>XXL<input type="radio" name="size" value="5"></label>
+											<label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!-- <label>M<input type="radio" name="size" value="2"></label> -->
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="3200" checked></label>
+												<span class="content-praice"> 3200 руб.</span>
+											</form>
+											<p>Мягкая ткани жакета имеет уникальные свойства. Бдагодоря им уход за ним сокращается до минимума.</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+									<!-- 	Двенадцатая картачка -->
+									<div id="optionTwelve" class="mens winter animate__animated animate__backInDown">
+										<div class="images">
+											<img src="womensImg/mens_12.jpg" alt="Спортивный костюм">
+										</div>
+										<div class="contents">
+											<h3>Спортивный костюм</h3>
+											<span>"Warmth & comfort"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5" checked></label>
+												<!-- <label>XL<input type="radio" name="size" value="4"></label>
+											<label>L<input type="radio" name="size" value="3"></label>
+											<label>M<input type="radio" name="size" value="2"></label> -->
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="5800" checked></label>
+												<span class="content-praice"> 5800 руб.</span>
+											</form>
+											<p>Российский бренд "Warmth & comfort" представляет вашему вниманию спортивный костюм прилегающего
+												кроя. Прочная ткань верха и мягкая экологичная подложка выгодно отличает модель
+											</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+		
+									<!-- 	Тринадцатая картачка -->
+									<div id="optionThitreen" class="mens autumn animate__animated animate__backInDown">
+										<div class="images">
+											<img src="womensImg/mens_13.jpg" alt="спортивная толстовка">
+										</div>
+										<div class="contents">
+											<h3>Спортивная толстовка</h3>
+											<span>"Спринт"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5" checked></label>
+												<!-- <label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!----> <label>M<input type="radio" name="size" value="2"></label>
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="3800" checked></label>
+												<span class="content-praice"> 3800 руб.</span>
+											</form>
+											<p>толстовка прилегающего кроя с двумя карманами. Ткань стрейч с флисом.
+											</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+		
+									<!-- 	Четырнадцатая картачка -->
+									<div id="optionFourteen" class="mens autumn animate__animated animate__backInDown">
+										<div class="images">
+											<img src="womensImg/mens_14.jpg" alt="спортивные брюки">
+										</div>
+										<div class="contents">
+											<h3>Спортивные брюки</h3>
+											<span>"Спринт"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<!-- <label>XXL<input type="radio" name="size" value="5" checked></label> -->
+												<!-- <label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!----> <label>M<input type="radio" name="size" value="2"></label>
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="1900" checked></label>
+												<span class="content-praice"> 1900 руб.</span>
+											</form>
+											<p>брюки спортивные прилегающего кроя с двумя карманами. Ткань стрейч с флисом.
+											</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+		
+									<!-- 	пятнадцатая картачка -->
+									<div id="optionFivteen" class="mens autumn sweatshirts  animate__animated animate__backInDown">
+										<div class="images">
+											<img src="womensImg/mens_15.jpg" alt="кофта">
+										</div>
+										<div class="contents">
+											<h3>Кофта</h3>
+											<span>"Warmth & comfort"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5" checked></label>
+												<!-- <label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!----> <label>M<input type="radio" name="size" value="2" checked></label>
+												<label>S<input type="radio" name="size" value="1" checked></label>
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="4190" checked></label>
+												<span class="content-praice"> 4190 руб.</span>
+											</form>
+											<p>Кофта прилегающая двойной вязки. Нити-100% лён.
+											</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+		
+									<!-- 	шестнадцатая картачка -->
+									<div id="optionsixteen" class="mens autumn sweatshirts  animate__animated animate__backInDown">
+										<div class="images">
+											<img src="womensImg/mens_16.jpg" alt="кофта">
+										</div>
+										<div class="contents">
+											<h3>Кофта</h3>
+											<span>"jampelle"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5" checked></label>
+												<!-- <label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!----> <label>M<input type="radio" name="size" value="2" checked></label>
+												<!-- <label>S<input type="radio" name="size" value="1" checked></label> -->
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="14300" checked></label>
+												<span class="content-praice"> 14390 руб.</span>
+											</form>
+											<p>Кофта прилегающая. Нити-100% шерсть "idalgo".
+											</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+		
+									<!-- 	семнадцатая картачка -->
+									<div id="optionSeventeen" class="mens autumn trousers animate__animated animate__backInDown">
+										<div class="images">
+											<img src="womensImg/mens_17.jpg" alt="кофта">
+										</div>
+										<div class="contents">
+											<h3>Брюки</h3>
+											<span>"jampelle"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5" checked></label>
+												<!-- <label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!----> <label>M<input type="radio" name="size" value="2" checked></label>
+												<!-- <label>S<input type="radio" name="size" value="1" checked></label> -->
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="7300" checked></label>
+												<span class="content-praice">7300 руб.</span>
+											</form>
+											<p>Брюки классические. Нити-60% шерсть "idalgo", 20% лён, 20% лавсан .
+											</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+		
+									<!-- 	восемнадцатая картачка -->
+									<div id="optionEighteen" class="mens autumn trousers animate__animated animate__backInDown">
+										<div class="images">
+											<img src="womensImg/mens_18.jpg" alt="кофта">
+										</div>
+										<div class="contents">
+											<h3>Брюки</h3>
+											<span>"jampelle"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5" checked></label>
+												<!-- <label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!----> <label>M<input type="radio" name="size" value="2" checked></label>
+												<!-- <label>S<input type="radio" name="size" value="1" checked></label> -->
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="7300" checked></label>
+												<span class="content-praice">7300 руб.</span>
+											</form>
+											<p>Брюки классические. Нити-60% шерсть "idalgo", 20% лён, 20% лавсан .
+											</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+		
+									<!-- 	девятнадцатая картачка -->
+									<div id="optionNineteen" class="mens autumn sweatshirts animate__animated animate__backInRight">
+										<div class="images">
+											<img src="womensImg/mens_19.jpg" alt="кофта">
+										</div>
+										<div class="contents">
+											<h3>Кофта</h3>
+											<span>"jampelle"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5" checked></label>
+												<!-- <label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!----> <label>M<input type="radio" name="size" value="2" checked></label>
+												<!-- <label>S<input type="radio" name="size" value="1" checked></label> -->
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="9300" checked></label>
+												<span class="content-praice">9300 руб.</span>
+											</form>
+											<p>Кофта. Нити-60% шерсть "idalgo", 20% лён, 20% лавсан .
+											</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+		
+									<!-- 	Двадцатая картачка -->
+									<div id="optionTwenty" class="mens autumn sweatshirts animate__animated animate__backInDown">
+										<div class="images">
+											<img src="womensImg/mens_20.jpg" alt="кофта">
+										</div>
+										<div class="contents">
+											<h3>Кофта</h3>
+											<span>"jampelle"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5" checked></label>
+												<!-- <label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!----> <label>M<input type="radio" name="size" value="2" checked></label>
+												<!-- <label>S<input type="radio" name="size" value="1" checked></label> -->
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="9300" checked></label>
+												<span class="content-praice">9300 руб.</span>
+											</form>
+											<p>Кофта. Нити-60% шерсть "idalgo", 20% лён, 20% лавсан .
+											</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+		
+									<!-- 	Двадцатьпервая картачка -->
+									<div id="optionTwentyohe" class="mens autumn sweatshirts animate__animated animate__backInDown">
+										<div class="images">
+											<img src="womensImg/mens_21.jpg" alt="кофта">
+										</div>
+										<div class="contents">
+											<h3>Кофта</h3>
+											<span>"jampelle"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5" checked></label>
+												<!-- <label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!----> <label>M<input type="radio" name="size" value="2" checked></label>
+												<!-- <label>S<input type="radio" name="size" value="1" checked></label> -->
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="8300" checked></label>
+												<span class="content-praice">8300 руб.</span>
+											</form>
+											<p>Кофта с вязанным узором . Нити-60% шерсть "idalgo", 20% лён, 20% лавсан .
+											</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+		
+		
+									<!-- 	Двадцатьпервая картачка -->
+									<div id="optionTwentytwo" class="mens sweatshirts animate__animated animate__backInDown">
+										<div class="images">
+											<img src="womensImg/mens_22.jpg" alt="кофта">
+										</div>
+										<div class="contents">
+											<h3>Кофта</h3>
+											<span>"jampelle"</span>
+											<span>Размер:</span>
+											<form class="content-size">
+												<label>XXL<input type="radio" name="size" value="5" checked></label>
+												<!-- <label>XL<input type="radio" name="size" value="4"></label> -->
+												<label>L<input type="radio" name="size" value="3" checked></label>
+												<!----> <label>M<input type="radio" name="size" value="2" checked></label>
+												<!-- <label>S<input type="radio" name="size" value="1" checked></label> -->
+											</form>
+											<form class="option-prices">
+												<label>Цена<input type="radio" name="prices" value="8300" checked></label>
+												<span class="content-praice">8300 руб.</span>
+											</form>
+											<p>Кофта ультролегкаяя . Нити-45% шерсть "idalgo", 5% шёка, 20% лён, 30% лавсан .
+											</p>
+											<button type="submit" class="radio-btn btn-mens">Купить в один клик</button>
+										</div>
+									</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="galery" class="galeri galeri-one">
+			<div class="container">
+				<div class="row">
+					<h2>Одежда на все времена</h2>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 cart-image">
+						<img src="img/model_1.jpg" alt="фотография">
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 cart-image">
+						<img src="img/moda_6.jpg" alt="фотография">
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 cart-image">
+						<img src="img/model_3.jpg" alt="фотография">
+					</div>
+					<a href="#" class="link">Подробности</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="galeri galeri-two">
+			<div class="container">
+				<div class="row">
+					<h2>Ваш нактюрн с модой</h2>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 cart-image">
+						<img src="img/model_13.jpg" alt="фотография">
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 cart-image">
+						<img src="img/model_15.jpg" alt="фотография">
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 cart-image">
+						<img src="img/model_5.jpg" alt="фотография">
+					</div>
+					<a href="#" class="link">Подробности</a>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container"></div>
+		</section>
+	</main>
+	<footer class="main-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-4 col-lg-4 col-md-12">
+
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-12">
+
+				</div>
+				<div id="registrationPortal" class="col-xl-4 col-lg-4 col-md-12">
+					<div class="div-form">
+						<h3>Регистрация на ...... </h3>
+						<form id="registrationForm" action="" class="form-registration">
+
+							<label class="label-login">Введите логин
+								<input id="loginRegInput" type="text" placeholder="имя" class="input-login" min="3" max="20">
+							</label>
+							<label class="label-mail">Введите Email
+								<input id="mailRegInput" type="email" name="mail" placeholder="Email" class="input-mail">
+							</label>
+							<label class="label-password">Введите пароль
+								<input id="passwordRegInput" type="password" name="password" placeholder="число" class="input-password"
+									min="5" max="20">
+							</label>
+							<label class="label-password">Повторите пароль
+								<input id="confirmInput" type="password" name="password" placeholder="число" class="confirmPassword"
+									min="5" max="20">
+							</label>
+							<div class="btn-box">
+								<button id="buttonRegist" class="btn-registration">Отправить</button>
+								<button type="reset" id="buttonReset" class="btn-registration">Сбросить</button>
+								<a href="#main" class="link-return">Вернуться</a>
+							</div>
+
+						</form>
+					</div>
+				</div>
+				<span>
+					<h3 class="copyright">Все права защишены 2021 год</h3>
+				</span>
+			</div>
+		</div>
+	</footer>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="js/event_1.js"></script>
+</body>
+
+</html>

@@ -116,6 +116,13 @@
 	width: 60%;
 }
 
+.images > img {
+	margin: 0 !important;
+	padding: 0;
+	border-radius: 10px;
+	width: 95%;
+}
+
 /* форма карточки */
 
 .option-prices {
@@ -127,17 +134,10 @@
 	font-size: 1.3rem;
 	color: rgb(206, 46, 37);
 	padding: 12px 10px;
-	text-shadow: 2px 2px 0 rgba(10, 10, 94, 0.3);
+	text-shadow: 1px 1px 0 rgba(10, 10, 94, 0.3);
 }
 
 /*  конец формы карточки */
-
-.images > img {
-	margin: 0 !important;
-	padding: 0;
-
-	width: 95%;
-}
 
 .contents {
 display: flex;
@@ -153,7 +153,13 @@ text-align: left;
 
 .content-size {
 	display: flex;
+	padding: 5px;
+
 	border: 1px solid rgba(10, 10, 94, 1.0);
+}
+
+.content-size input {
+	margin-right: 10px;
 }
 
 .btn-mens {
