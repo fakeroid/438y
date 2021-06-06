@@ -1,3 +1,29 @@
+//	Owl carusel
+
+
+$(function() {
+	$('.works-carousel').owlCarousel({
+    	loop:true,
+    	margin:30,
+    	nav:true,
+      dots:true,
+      navText : ['<img src="img/left.svg" alt="влево">','<img src="img/right.svg" alt="вправо">'],
+    	responsive:{
+       		 0:{
+           		 items:1
+       		 },
+        	600:{
+            	items:1
+        	},
+        	1000:{
+            	items:1
+        	}
+    	}
+	});
+});
+
+//	----------------------------------------------------------
+
 //			фон body в мобильном режиме
 const widthUserScreen = screen.width;
 
@@ -12,6 +38,9 @@ if (widthUserScreen < 480) {
 	document.body.style.background = "green";
 	// console.log(widthUserScreen);
 }
+
+
+
 
 // console.log($(document));
 //	Формы регистрации и входа 

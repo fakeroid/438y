@@ -243,8 +243,8 @@ color: 	rgb(10, 10, 94);
 }
 
  
-.showcase {
-	height: 675px;
+.showcaseone {
+	/*height: 675px;*/
 	margin: 0 !important;
 	background-image: url('../img/bg_2a.jpg');
 	background-size: 100%;
@@ -253,6 +253,40 @@ color: 	rgb(10, 10, 94);
 	
 	padding: 15px 40px 25px 0 !important;
 }
+
+.showcasetwo {
+		/*height: 675px;*/
+	margin: 0 !important;
+	background-image: url('../img/bg_3.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	text-align: left;
+	
+	padding: 15px 40px 25px 0 !important;
+}
+
+.showcasethree {
+		/*height: 675px;*/
+	margin: 0 !important;
+	background-image: url('../img/bg_4.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	text-align: left;
+	
+	padding: 15px 40px 25px 0 !important;
+}
+
+.showcasefour {
+		/*height: 675px;*/
+	margin: 0 !important;
+	background-image: url('../img/bg_5.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	text-align: left;
+	
+	padding: 15px 40px 25px 0 !important;
+}
+
 
 .showcase-content {
 	background-color: rgba(10, 10, 94, 0.3);
@@ -407,7 +441,20 @@ color: 	rgb(10, 10, 94);
 	transform: rotate(4deg);
 	filter: none;
 }
+/*		секция контакты			*/
+.contacts {
+	padding: 70px 0;
+	text-align: center;
+}
 
+.link-contacts {
+	font-size: 1.5rem;
+}
+
+.link-contacts:hover {
+	color: #e4441c !important;
+	cursor: pointer;
+}
 
 /*   Начало footer  */
 
